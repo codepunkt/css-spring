@@ -1,5 +1,8 @@
 exports[`css-spring matches snapshots 1`] = `
 Object {
+  "0%": Object {
+    "opacity": 0,
+  },
   "1%": Object {
     "opacity": 0.017,
   },
@@ -305,6 +308,9 @@ Object {
 
 exports[`css-spring matches snapshots 2`] = `
 Object {
+  "0%": Object {
+    "padding-left": -50,
+  },
   "1%": Object {
     "padding-left": -48.2,
   },
@@ -312,7 +318,7 @@ Object {
     "padding-left": 10.30039,
   },
   "100%": Object {
-    "padding-left": 49.85832,
+    "padding-left": 50,
   },
   "11%": Object {
     "padding-left": 17.8614,
@@ -610,6 +616,10 @@ Object {
 
 exports[`css-spring matches snapshots 3`] = `
 Object {
+  "0%": Object {
+    "margin-right": 0,
+    "padding-left": -50,
+  },
   "1%": Object {
     "margin-right": 1.524,
     "padding-left": -48.8,
@@ -619,8 +629,8 @@ Object {
     "padding-left": -9.7,
   },
   "100%": Object {
-    "margin-right": 126.998,
-    "padding-left": 49.999,
+    "margin-right": 127,
+    "padding-left": 50,
   },
   "11%": Object {
     "margin-right": 57.971,

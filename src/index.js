@@ -20,8 +20,10 @@ export const getKeyframes = (startProps, targetProps, options = {}) => {
     presets[options.preset] || {}
   )
 
-  const steps = {}
   const cache = initCache(startProps, targetProps)
+  const steps = { '0%': Object.keys(cache).reduce((accu, key) => {
+    return Object.assign(accu, { [key]: cache[key].start })
+  }, {})}
 
   for (let i = 1; i < 101; i += 1) {
     const props = {}
@@ -29,7 +31,7 @@ export const getKeyframes = (startProps, targetProps, options = {}) => {
       const prop = cache[key]
       const [value, velocity] = stepper(0.01, prop.cache.value, prop.cache.velocity, parseFloat(prop.target), stiffness, damping)
       prop.cache = { value, velocity }
-      props[key] = +prop.cache.value.toFixed(precision)
+      props[key] = +(i === 100 ? prop.target : prop.cache.value).toFixed(precision)
     })
     steps[`${i}%`] = props
   }

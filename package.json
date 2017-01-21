@@ -1,6 +1,6 @@
 {
   "name": "css-spring",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Generates values for physics based css-keyframe animations",
   "main": "build/index.js",
   "repository": {

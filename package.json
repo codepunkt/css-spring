@@ -1,11 +1,11 @@
 {
   "name": "css-spring",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Generates values for physics based css-keyframe animations",
   "main": "build/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codepunkt/ss-spring.git"
+    "url": "git+https://github.com/codepunkt/css-spring.git"
   },
   "author": "Christoph Werner <christoph@codepunkt.de>",
   "license": "MIT",

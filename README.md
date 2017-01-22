@@ -21,6 +21,8 @@ const moveLeft = format(
 )
 ```
 
+![Example image](https://raw.githubusercontent.com/codepunkt/css-spring/master/example.gif)
+
 ## TOC
 
   - [Introduction](#introduction)

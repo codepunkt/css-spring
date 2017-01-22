@@ -14,7 +14,7 @@ const defaults = {
   precision: 3,
 }
 
-export const getKeyframes = (startProps, targetProps, options = {}) => {
+export const spring = (startProps, targetProps, options = {}) => {
   const { stiffness, damping, precision } = Object.assign(
     {}, defaults, options,
     presets[options.preset] || {}
@@ -39,4 +39,4 @@ export const getKeyframes = (startProps, targetProps, options = {}) => {
 }
 
 export { default as format } from './format';
-export default getKeyframes
+export default spring

@@ -3,3 +3,4 @@ src
 node_modules
 build/__tests__
 npm-debug.log
+.DS_Store

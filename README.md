@@ -10,14 +10,14 @@ Generates physics based css-keyframe animations.
 import spring, { format } from 'css-spring'
 
 const keyframes = spring(
-  { translate3d: 0 },
-  { translate3d: 250 },
+  { left: 0 },
+  { left: 250 },
   { preset: 'wobbly', precision: 5 }
 )
 
 const moveLeft = format(
   keyframes,
-  (k, v) => `transform: ${k}(${v} 0 0);`
+  format.PX_FORMATTER
 )
 ```
 

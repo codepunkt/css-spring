@@ -1,4 +1,5 @@
 # css-spring 🚀
+
 [![NPM Version](https://img.shields.io/npm/v/css-spring.svg?style=flat&label=NPM%20Version)](http://npm.im/css-spring)
 [![Build Status](https://img.shields.io/travis/codepunkt/css-spring.svg?style=flat&label=Build%20Status)](https://travis-ci.org/codepunkt/css-spring)
 [![Code Coverage](https://img.shields.io/coveralls/codepunkt/css-spring.svg?style=flat&label=Code%20Coverage)](https://coveralls.io/github/codepunkt/css-spring?branch=master)
@@ -6,7 +7,10 @@
 
 Generates physics based css-keyframe animations.
 
-```javascript
+<table>
+<tr>
+<td>
+   <pre lang="javascript">
 import spring, { format } from 'css-spring'
 
 const keyframes = spring(
@@ -19,9 +23,13 @@ const moveLeft = format(
   keyframes,
   format.PX_FORMATTER
 )
-```
-
-![Example image](https://raw.githubusercontent.com/codepunkt/css-spring/master/example.gif)
+   </pre>
+</td>
+<td>
+  <img src="https://raw.githubusercontent.com/codepunkt/css-spring/master/example.gif" alt="css-spring example"/>
+</td>
+</tr>
+</table>
 
 ## TOC
 

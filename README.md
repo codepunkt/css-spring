@@ -5,7 +5,7 @@
 [![Code Coverage](https://img.shields.io/coveralls/codepunkt/css-spring.svg?style=flat&label=Code%20Coverage)](https://coveralls.io/github/codepunkt/css-spring?branch=master)
 [![MIT License](https://img.shields.io/npm/l/css-spring.svg?style=flat&label=License)](http://opensource.org/licenses/MIT)
 
-Generates physics based css-keyframe animations.
+Generate physics based css-keyframe animations.
 
 <table>
 <tr>

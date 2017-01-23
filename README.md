@@ -62,10 +62,6 @@ const springLeft = format(spring(
 ))
 
 const StyledDiv = styled.div`
-  position: absolute;
-  width: 100px;
-  height: 50px;
-  top: 50px;
   animation: ${keyframes`${springLeft}`} 1s linear infinite;
 `
 ```

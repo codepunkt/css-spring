@@ -112,8 +112,8 @@ An object with `0%` to `100%` keys and the interpolated physics-based values for
 {
   "0%": { "left": 0 },
   "1%": { "left": 3 },
-  "1%": { "left": 8.544 },
-  // 2% … 98%
+  "2%": { "left": 8.544 },
+  // 3% … 98%
   "99%": { "left": 249.981 }
   "100%": { "left": 250 }
 }

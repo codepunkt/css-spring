@@ -87,4 +87,36 @@ const MyComponent = () => (
 
 ## API
 ### `spring(start, target, options)`
+
+This method creates spring-based keyframes. Called with start and target properties, it returns an object with the interpolated animation values.
+
+#### Arguments
+  
+  - `start` (_Object_): The start properties for the animation. The keys should be css properties, the values should be able to be parsed to a number by `parseFloat`. Keys that can not be parsed or do not exist in the target properties are ignored.
+  - `target` (_Object_): The target properties for the animation. The keys should be css properties, the values should be able to be parsed to a number by `parseFloat`. Keys that can not be parsed or do not exist in the start properties are ignored.
+  - `options` (_Object_, optional): Animation options with these properties:
+    - `precision` (_Number_, optional, defaults to `3`) Specifies the number of decimals in the rounding of interpolated values.
+    - `preset` (_String_, optional): Presets for `stiffness` and `damping`, overriding any stiffness and damping values given. Available presets:
+      - `stiff` stiffness 210, damping 20
+      - `gentle` stiffness 120, damping 14
+      - `wobbly` stiffness 180, damping 12
+      - `noWobble` stiffness 170, damping 26
+    - `stiffness` (_Number_, optional, default: 170): The stiffness of your spring-based animation.
+    - `damping` (_Number_, optional, default: 26): The damping of your spring-based animation.
+
+#### Returns
+
+An object with `0%` to `100%` keys and the interpolated physics-based values for each step of the animation, e.g.:
+
+```javascript
+{
+  "0%": { "left": 0 },
+  "1%": { "left": 3 },
+  "1%": { "left": 8.544 },
+  // 2% … 98%
+  "99%": { "left": 249.981 }
+  "100%": { "left": 250 }
+}
+```
+
 ### `format(keyframes, formatter)`

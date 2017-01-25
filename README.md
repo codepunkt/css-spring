@@ -46,7 +46,7 @@ const moveLeft = format(
 
 This library was inspired heavily by [react-motion](https://github.com/chenglou/react-motion), which allows you to create spring-based animations by repeatedly updating an elements inline styles. When animating lots of elements at the same time, this can be a burden on performance. Also, based on my own experience, integrating with some css-in-js libraries is hard.
 
-This is where **css-spring** enters the stage. Enter the desired starting properties and target properties of your animation, optionally adjust the spring settings and **css-spring** generates a keyframe objects or formatted keyframe animation css for your spring-based animation of choice.
+This is where **css-spring** enters the stage. Enter the desired starting properties and target properties of your animation, optionally adjust the spring settings and **css-spring** generates a keyframe object or formatted keyframe animation css for your spring-based animation of choice.
 
 The library is small and easy to work with. Nevertheless, it is in the early stages of development. There is a lot of improvements to be made - read the [Contributing](#contributing) section if you want to know how you can help.
 
@@ -142,9 +142,9 @@ A formatted css keyframes string.
 A keyframes object based on `startValues = { opacity: 0, left: '10px' }` and `targetValues = { opacity: 1, left: '20px' }` will have all units (in this case, `px`) removed from the interpolated values. In order to get css with the correct unit for the interpolated `left` values, but no unit for the interpolated `opacity` values, write your own formatter such as this:
 
 ```javascript
-const keyframeCss = format(mySpring, (key, value) => {
-  return `${key}:${value}${key === 'left' ? 'px' : ''};`
-});
+const keyframeCss = format(mySpring, (key, value) =>
+  `${key}:${value}${key === 'left' ? 'px' : ''};`
+)
 ```
 
 ## Contributing

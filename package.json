@@ -1,7 +1,7 @@
 {
   "name": "css-spring",
-  "version": "2.1.0",
-  "description": "Generates values for physics based css-keyframe animations",
+  "version": "2.1.1",
+  "description": "Generate physics based css-keyframe animations",
   "main": "build/index.js",
   "repository": {
     "type": "git",

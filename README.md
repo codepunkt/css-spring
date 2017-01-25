@@ -40,10 +40,15 @@ const moveLeft = format(
   - [API](#api)
     - [spring(start, target, options)](#springstart-target-options)
     - [format(keyframes, formatter)](#formatkeyframes-formatter)
+  - [Contributing](#contributing)
 
 ## Introduction
 
-Some introductory text
+This library was inspired heavily by [react-motion](https://github.com/chenglou/react-motion), which allows you to create spring-based animations by repeatedly updating an elements inline styles. When animating lots of elements at the same time, this can be a burden on performance. Also, based on my own experience, integrating with some css-in-js libraries is hard.
+
+This is where **css-spring** enters the stage. Enter the desired starting properties and target properties of your animation, optionally adjust the spring settings and **css-spring** generates a keyframe objects or formatted keyframe animation css for your spring-based animation of choice.
+
+The library is small and easy to work with. Nevertheless, it is in the early stages of development. There is a lot of improvements to be made - read the [Contributing](#contributing) section if you want to know how you can help.
 
 ## Examples
 
@@ -141,3 +146,13 @@ const keyframeCss = format(mySpring, (key, value) => {
   return `${key}:${value}${key === 'left' ? 'px' : ''};`
 });
 ```
+
+## Contributing
+
+There's a lot of ideas floating in my head that could make working with **css-spring** easier. Some of these are:
+
+  - allowing the interpolation of array values like margins, paddings or translates ([#1](/../../issues/1))
+  - automatically detecting css-units and re-applying them to the interpolated values of the keyframe animation ([#2](/../../issues/2))
+  - color interpolation ([#3](/../../issues/3))
+  
+Feel free to contribute with your own issues and ideas, your thoughts on the ones listed above, example documentation for usage with other css-in-js frameworks or pull requests for features/improvements you'd like to see.

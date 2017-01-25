@@ -120,3 +120,24 @@ An object with `0%` to `100%` keys and the interpolated physics-based values for
 ```
 
 ### `format(keyframes, formatter)`
+
+This method takes the return value of `spring` and formats it to valid css (with corresponding units). As of now, the interpolated key-frame values are unitless because units are stripped at creation. Simple formatters that add `px`, `em` or `rem` units to every property value are available as `format.PX_FORMATTER`, `format.EM_FORMATTER` and `format.REM_FORMATTER`.
+
+#### Arguments
+
+  - `keyframes` (_Object_): The interpolated animation values object given by `spring`.
+  - `formatter` (_Function_, optional, defaults to `format.PX_FORMATTER`): The formatter function that is invoked for every property/value combination.
+
+#### Returns
+
+A formatted css keyframes string.
+
+#### Example
+
+A keyframes object based on `startValues = { opacity: 0, left: '10px' }` and `targetValues = { opacity: 1, left: '20px' }` will have all units (in this case, `px`) removed from the interpolated values. In order to get css with the correct unit for the interpolated `left` values, but no unit for the interpolated `opacity` values, write your own formatter such as this:
+
+```javascript
+const keyframeCss = format(mySpring, (key, value) => {
+  return `${key}:${value}${key === 'left' ? 'px' : ''};`
+});
+```

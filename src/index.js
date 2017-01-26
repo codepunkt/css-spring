@@ -1,5 +1,6 @@
 import stepper from './stepper'
-import { initCache } from './cache'
+import { mapValues } from './util'
+import { getAnimatableProps } from './props'
 
 const presets = {
   noWobble: { stiffness: 170, damping: 26 },
@@ -8,35 +9,71 @@ const presets = {
   stiff: { stiffness: 210, damping: 20 },
 }
 
-const defaults = {
-  stiffness: 170,
-  damping: 26,
+// default spring options.
+// damping and precision reflect the values of the `wobbly` preset,
+// precision defaults to 3 which should be a good tradeoff between
+// animation detail and resulting filesize.
+const defaultOptions = {
+  stiffness: 180,
+  damping: 12,
   precision: 3,
 }
 
-export const spring = (startProps, targetProps, options = {}) => {
+export const spring = (startProps, endProps, options = {}) => {
+  // define stiffness, damping and precision based on default options
+  // and options given in arguments.
   const { stiffness, damping, precision } = Object.assign(
-    {}, defaults, options,
+    {},
+    defaultOptions,
+    options,
     presets[options.preset] || {}
   )
 
-  const cache = initCache(startProps, targetProps)
-  const steps = { '0%': Object.keys(cache).reduce((accu, key) => {
-    return Object.assign(accu, { [key]: cache[key].start })
-  }, {})}
+  const animatableProps = getAnimatableProps(startProps, endProps)
+  const startValues = mapValues(animatableProps, ({ start }) => start)
+  const endValues = mapValues(animatableProps, ({ end }) => end)
 
-  for (let i = 1; i < 101; i += 1) {
-    const props = {}
-    Object.keys(cache).forEach((key) => {
-      const prop = cache[key]
-      const [value, velocity] = stepper(0.01, prop.cache.value, prop.cache.velocity, parseFloat(prop.target), stiffness, damping)
-      prop.cache = { value, velocity }
-      props[key] = +(i === 100 ? prop.target : prop.cache.value).toFixed(precision)
-    })
-    steps[`${i}%`] = props
+  const addUnits = (object) =>
+    mapValues(object, (v, k) => `${v}${animatableProps[k].unit}`)
+
+  const keyframes = {
+    '0%': addUnits(startValues),
+    '100%': addUnits(endValues),
   }
-  return steps
+
+  Object.keys(startValues).forEach((key) => {
+    let velocity = 0
+    let value = startValues[key]
+    const end = endValues[key]
+
+    for (let i = 1; i < 100; i += 1) {
+      [ value, velocity ] = stepper(0.01, value, velocity, end, stiffness, damping)
+      const percent = `${i}%`
+      keyframes[percent] = Object.assign(
+        keyframes[percent] || {},
+        { [key]: `${+value.toFixed(precision)}${animatableProps[key].unit}` }
+      )
+    }
+  })
+
+  return keyframes
 }
 
-export { default as format } from './format';
+// console.log(spring({
+//   left: '10px',
+//   right: '20em',
+//   foo: 'bar',
+//   opacity: 0,
+//   rotate: '5deg'
+// }, {
+//   left: '20px',
+//   right: '30em',
+//   baz: true,
+//   opacity: 1,
+//   rotate: '10deg'
+// }, {
+//   preset: 'noWobble'
+// }))
+
+export { default as toString } from './to-string'
 export default spring

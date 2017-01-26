@@ -1,25 +1,48 @@
 import spring from '../index'
-import { initCache } from '../cache'
 
 describe('css-spring', () => {
   test('matches snapshots', () => {
     expect(
-      spring({ opacity: 0 }, { opacity: 1 })
+      spring(
+        {
+          opacity: 0,
+        }, {
+          opacity: 1,
+        })
     ).toMatchSnapshot()
 
     expect(
       spring(
-        { 'padding-left': -50 },
-        { 'padding-left': 50 },
-        { preset: 'wobbly', precision: 5 }
+        {
+          'padding-left': '-50px',
+        },
+        {
+          'padding-left': '50px',
+        },
+        {
+          preset: 'wobbly',
+          precision: 5,
+        }
       )
     ).toMatchSnapshot()
 
     expect(
       spring(
-        { 'padding-left': -50, 'opacity': true, 'margin-right': 0 },
-        { 'padding-left': 50, opacity: 1, 'margin-right': 127 },
-        { preset: 'gentle', damping: 50, stiffness: 80 }
+        {
+          'padding-left': '-50rem',
+          'opacity': true,
+          'margin-right': '0em',
+        },
+        {
+          'padding-left': '50px',
+          opacity: 1,
+          'margin-right': '127em',
+        },
+        {
+          preset: 'gentle',
+          damping: 50,
+          stiffness: 80,
+        }
       )
     ).toMatchSnapshot()
   })

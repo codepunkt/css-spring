@@ -22,8 +22,8 @@ export const getAnimatableProps = (startProps, endProps) => {
       if (startMatches && endMatches && startMatches[2] === endMatches[2]) {
         result[key] = {
           unit: startMatches[2],
-          start: +startMatches[1],
-          end: +endMatches[1]
+          start: Number(startMatches[1]),
+          end: Number(endMatches[1]),
         }
       }
     }

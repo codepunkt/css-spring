@@ -51,7 +51,7 @@ export const spring = (startProps, endProps, options = {}) => {
       const percent = `${i}%`
       keyframes[percent] = Object.assign(
         keyframes[percent] || {},
-        { [key]: `${+value.toFixed(precision)}${animatableProps[key].unit}` }
+        { [key]: `${Number(value.toFixed(precision))}${animatableProps[key].unit}` }
       )
     }
   })

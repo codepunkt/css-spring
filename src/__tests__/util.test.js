@@ -14,7 +14,7 @@ describe('utilities', () => {
     })
 
     test('maps each value', () => {
-      const mapped = mapValues({ foo: 1, bar: 2 }, (v) => 'wat')
+      const mapped = mapValues({ foo: 1, bar: 2 }, () => 'wat')
       expect(mapped).toEqual({ foo: 'wat', bar: 'wat' })
     })
   })

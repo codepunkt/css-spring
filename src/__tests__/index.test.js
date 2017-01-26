@@ -30,7 +30,7 @@ describe('css-spring', () => {
       spring(
         {
           'padding-left': '-50rem',
-          'opacity': true,
+          opacity: true,
           'margin-right': '0em',
         },
         {

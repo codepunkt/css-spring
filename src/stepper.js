@@ -1,7 +1,8 @@
 // Taken from react-motion
 // @see https://github.com/chenglou/react-motion/blob/master/src/stepper.js
-const reusedTuple = [0, 0]
+const reusedTuple = [ 0, 0 ]
 
+// eslint-disable-next-line max-params
 export default (secondPerFrame, x, v, destX, k, b, precision = 0.01) => {
   // Spring stiffness, in kg / s^2
 

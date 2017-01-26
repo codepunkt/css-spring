@@ -16,7 +16,7 @@ describe('format', () => {
     expect(
       reduceProperties({
         'padding-right': '12px',
-        'padding-left': '12px'
+        'padding-left': '12px',
       })
     ).toEqual(
       'padding-right:12px;padding-left:12px;'

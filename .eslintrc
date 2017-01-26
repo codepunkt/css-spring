@@ -1,0 +1,39 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [ "xo", "plugin:unicorn/recommended" ],
+  "plugins": [ "import", "unicorn" ],
+  "rules": {
+    // omit semicolons. there's only a few cases where automatic
+    // semicolon insertion is problematic - most of which can be
+    // mitigated by other linting rules such as func-call-spacing
+    // or no-unexpected-multiline
+    "semi": [ 2, "never" ],
+    // enforce 2-space indentation
+    "indent": [ 2, 2 ],
+    // enforce arrow parens, regardless of argument count
+    "arrow-parens": [ 2, "always" ],
+    // enforce dangling commas for multiline statements
+    "comma-dangle": [ 2, "always-multiline" ],
+    // enforce consistent spacing inside braces and brackets
+    "array-bracket-spacing": [ 2, "always", {
+      "arraysInArrays": false,
+      "objectsInArrays": false
+    }],
+    "object-curly-spacing": [ 2, "always", {
+      "arraysInObjects": false,
+      "objectsInObjects": false
+    }],
+    // enforce consistent linebreak style for operators, with an
+    // exception being made for multi-line-ternaries so those are
+    // easier to spot
+    "operator-linebreak": [ 2, "after", {
+      "overrides": { "?": "before", ":": "before" }
+    }]
+  }
+}

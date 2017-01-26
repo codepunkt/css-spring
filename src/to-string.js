@@ -13,5 +13,4 @@ export const toString = (keyframes, formatter = defaultFormatter) => {
   }, '')
 }
 
-
 export default toString

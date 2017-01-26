@@ -1,307 +1,307 @@
 exports[`css-spring matches snapshots 1`] = `
 Object {
   "0%": Object {
-    "opacity": 0,
+    "opacity": "0",
   },
   "1%": Object {
-    "opacity": 0.017,
+    "opacity": "0.018",
   },
   "10%": Object {
-    "opacity": 0.416,
+    "opacity": "0.603",
   },
   "100%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "11%": Object {
-    "opacity": 0.46,
+    "opacity": "0.679",
   },
   "12%": Object {
-    "opacity": 0.501,
+    "opacity": "0.751",
   },
   "13%": Object {
-    "opacity": 0.541,
+    "opacity": "0.819",
   },
   "14%": Object {
-    "opacity": 0.578,
+    "opacity": "0.882",
   },
   "15%": Object {
-    "opacity": 0.612,
+    "opacity": "0.94",
   },
   "16%": Object {
-    "opacity": 0.644,
+    "opacity": "0.992",
   },
   "17%": Object {
-    "opacity": 0.674,
+    "opacity": "1.038",
   },
   "18%": Object {
-    "opacity": 0.702,
+    "opacity": "1.077",
   },
   "19%": Object {
-    "opacity": 0.727,
+    "opacity": "1.111",
   },
   "2%": Object {
-    "opacity": 0.046,
+    "opacity": "0.052",
   },
   "20%": Object {
-    "opacity": 0.751,
+    "opacity": "1.138",
   },
   "21%": Object {
-    "opacity": 0.772,
+    "opacity": "1.16",
   },
   "22%": Object {
-    "opacity": 0.792,
+    "opacity": "1.176",
   },
   "23%": Object {
-    "opacity": 0.811,
+    "opacity": "1.187",
   },
   "24%": Object {
-    "opacity": 0.827,
+    "opacity": "1.194",
   },
   "25%": Object {
-    "opacity": 0.843,
+    "opacity": "1.196",
   },
   "26%": Object {
-    "opacity": 0.857,
+    "opacity": "1.194",
   },
   "27%": Object {
-    "opacity": 0.869,
+    "opacity": "1.189",
   },
   "28%": Object {
-    "opacity": 0.881,
+    "opacity": "1.181",
   },
   "29%": Object {
-    "opacity": 0.892,
+    "opacity": "1.171",
   },
   "3%": Object {
-    "opacity": 0.084,
+    "opacity": "0.098",
   },
   "30%": Object {
-    "opacity": 0.901,
+    "opacity": "1.159",
   },
   "31%": Object {
-    "opacity": 0.91,
+    "opacity": "1.146",
   },
   "32%": Object {
-    "opacity": 0.918,
+    "opacity": "1.132",
   },
   "33%": Object {
-    "opacity": 0.926,
+    "opacity": "1.117",
   },
   "34%": Object {
-    "opacity": 0.933,
+    "opacity": "1.101",
   },
   "35%": Object {
-    "opacity": 0.939,
+    "opacity": "1.086",
   },
   "36%": Object {
-    "opacity": 0.944,
+    "opacity": "1.071",
   },
   "37%": Object {
-    "opacity": 0.949,
+    "opacity": "1.056",
   },
   "38%": Object {
-    "opacity": 0.954,
+    "opacity": "1.043",
   },
   "39%": Object {
-    "opacity": 0.958,
+    "opacity": "1.03",
   },
   "4%": Object {
-    "opacity": 0.128,
+    "opacity": "0.155",
   },
   "40%": Object {
-    "opacity": 0.962,
+    "opacity": "1.018",
   },
   "41%": Object {
-    "opacity": 0.965,
+    "opacity": "1.007",
   },
   "42%": Object {
-    "opacity": 0.969,
+    "opacity": "0.997",
   },
   "43%": Object {
-    "opacity": 0.971,
+    "opacity": "0.989",
   },
   "44%": Object {
-    "opacity": 0.974,
+    "opacity": "0.982",
   },
   "45%": Object {
-    "opacity": 0.976,
+    "opacity": "0.976",
   },
   "46%": Object {
-    "opacity": 0.979,
+    "opacity": "0.971",
   },
   "47%": Object {
-    "opacity": 0.981,
+    "opacity": "0.967",
   },
   "48%": Object {
-    "opacity": 0.982,
+    "opacity": "0.964",
   },
   "49%": Object {
-    "opacity": 0.984,
+    "opacity": "0.963",
   },
   "5%": Object {
-    "opacity": 0.175,
+    "opacity": "0.221",
   },
   "50%": Object {
-    "opacity": 0.985,
+    "opacity": "0.962",
   },
   "51%": Object {
-    "opacity": 0.987,
+    "opacity": "0.962",
   },
   "52%": Object {
-    "opacity": 0.988,
+    "opacity": "0.962",
   },
   "53%": Object {
-    "opacity": 0.989,
+    "opacity": "0.964",
   },
   "54%": Object {
-    "opacity": 0.99,
+    "opacity": "0.965",
   },
   "55%": Object {
-    "opacity": 0.991,
+    "opacity": "0.968",
   },
   "56%": Object {
-    "opacity": 0.992,
+    "opacity": "0.97",
   },
   "57%": Object {
-    "opacity": 0.993,
+    "opacity": "0.973",
   },
   "58%": Object {
-    "opacity": 0.993,
+    "opacity": "0.976",
   },
   "59%": Object {
-    "opacity": 0.994,
+    "opacity": "0.979",
   },
   "6%": Object {
-    "opacity": 0.224,
+    "opacity": "0.293",
   },
   "60%": Object {
-    "opacity": 0.994,
+    "opacity": "0.982",
   },
   "61%": Object {
-    "opacity": 0.995,
+    "opacity": "0.985",
   },
   "62%": Object {
-    "opacity": 0.995,
+    "opacity": "0.987",
   },
   "63%": Object {
-    "opacity": 0.996,
+    "opacity": "0.99",
   },
   "64%": Object {
-    "opacity": 0.996,
+    "opacity": "0.993",
   },
   "65%": Object {
-    "opacity": 0.997,
+    "opacity": "0.995",
   },
   "66%": Object {
-    "opacity": 0.997,
+    "opacity": "0.998",
   },
   "67%": Object {
-    "opacity": 0.997,
+    "opacity": "1",
   },
   "68%": Object {
-    "opacity": 0.997,
+    "opacity": "1.001",
   },
   "69%": Object {
-    "opacity": 0.998,
+    "opacity": "1.003",
   },
   "7%": Object {
-    "opacity": 0.273,
+    "opacity": "0.368",
   },
   "70%": Object {
-    "opacity": 0.998,
+    "opacity": "1.004",
   },
   "71%": Object {
-    "opacity": 0.998,
+    "opacity": "1.005",
   },
   "72%": Object {
-    "opacity": 0.998,
+    "opacity": "1.006",
   },
   "73%": Object {
-    "opacity": 0.998,
+    "opacity": "1.007",
   },
   "74%": Object {
-    "opacity": 0.999,
+    "opacity": "1.007",
   },
   "75%": Object {
-    "opacity": 0.999,
+    "opacity": "1.007",
   },
   "76%": Object {
-    "opacity": 0.999,
+    "opacity": "1",
   },
   "77%": Object {
-    "opacity": 0.999,
+    "opacity": "1",
   },
   "78%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "79%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "8%": Object {
-    "opacity": 0.322,
+    "opacity": "0.447",
   },
   "80%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "81%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "82%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "83%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "84%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "85%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "86%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "87%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "88%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "89%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "9%": Object {
-    "opacity": 0.37,
+    "opacity": "0.525",
   },
   "90%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "91%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "92%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "93%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "94%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "95%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "96%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "97%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "98%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
   "99%": Object {
-    "opacity": 1,
+    "opacity": "1",
   },
 }
 `;
@@ -309,307 +309,307 @@ Object {
 exports[`css-spring matches snapshots 2`] = `
 Object {
   "0%": Object {
-    "padding-left": -50,
+    "padding-left": "-50px",
   },
   "1%": Object {
-    "padding-left": -48.2,
+    "padding-left": "-48.2px",
   },
   "10%": Object {
-    "padding-left": 10.30039,
+    "padding-left": "10.30039px",
   },
   "100%": Object {
-    "padding-left": 50,
+    "padding-left": "50px",
   },
   "11%": Object {
-    "padding-left": 17.8614,
+    "padding-left": "17.8614px",
   },
   "12%": Object {
-    "padding-left": 25.09358,
+    "padding-left": "25.09358px",
   },
   "13%": Object {
-    "padding-left": 31.90621,
+    "padding-left": "31.90621px",
   },
   "14%": Object {
-    "padding-left": 38.22702,
+    "padding-left": "38.22702px",
   },
   "15%": Object {
-    "padding-left": 44.00124,
+    "padding-left": "44.00124px",
   },
   "16%": Object {
-    "padding-left": 49.19053,
+    "padding-left": "49.19053px",
   },
   "17%": Object {
-    "padding-left": 53.77168,
+    "padding-left": "53.77168px",
   },
   "18%": Object {
-    "padding-left": 57.7352,
+    "padding-left": "57.7352px",
   },
   "19%": Object {
-    "padding-left": 61.08387,
+    "padding-left": "61.08387px",
   },
   "2%": Object {
-    "padding-left": -44.8484,
+    "padding-left": "-44.8484px",
   },
   "20%": Object {
-    "padding-left": 63.83118,
+    "padding-left": "63.83118px",
   },
   "21%": Object {
-    "padding-left": 65.99986,
+    "padding-left": "65.99986px",
   },
   "22%": Object {
-    "padding-left": 67.6203,
+    "padding-left": "67.6203px",
   },
   "23%": Object {
-    "padding-left": 68.72912,
+    "padding-left": "68.72912px",
   },
   "24%": Object {
-    "padding-left": 69.36776,
+    "padding-left": "69.36776px",
   },
   "25%": Object {
-    "padding-left": 69.58114,
+    "padding-left": "69.58114px",
   },
   "26%": Object {
-    "padding-left": 69.41645,
+    "padding-left": "69.41645px",
   },
   "27%": Object {
-    "padding-left": 68.92203,
+    "padding-left": "68.92203px",
   },
   "28%": Object {
-    "padding-left": 68.14635,
+    "padding-left": "68.14635px",
   },
   "29%": Object {
-    "padding-left": 67.13711,
+    "padding-left": "67.13711px",
   },
   "3%": Object {
-    "padding-left": -40.19172,
+    "padding-left": "-40.19172px",
   },
   "30%": Object {
-    "padding-left": 65.94051,
+    "padding-left": "65.94051px",
   },
   "31%": Object {
-    "padding-left": 64.60058,
+    "padding-left": "64.60058px",
   },
   "32%": Object {
-    "padding-left": 63.15863,
+    "padding-left": "63.15863px",
   },
   "33%": Object {
-    "padding-left": 61.65285,
+    "padding-left": "61.65285px",
   },
   "34%": Object {
-    "padding-left": 60.11802,
+    "padding-left": "60.11802px",
   },
   "35%": Object {
-    "padding-left": 58.58524,
+    "padding-left": "58.58524px",
   },
   "36%": Object {
-    "padding-left": 57.08187,
+    "padding-left": "57.08187px",
   },
   "37%": Object {
-    "padding-left": 55.63142,
+    "padding-left": "55.63142px",
   },
   "38%": Object {
-    "padding-left": 54.25366,
+    "padding-left": "54.25366px",
   },
   "39%": Object {
-    "padding-left": 52.96467,
+    "padding-left": "52.96467px",
   },
   "4%": Object {
-    "padding-left": -34.47039,
+    "padding-left": "-34.47039px",
   },
   "40%": Object {
-    "padding-left": 51.77699,
+    "padding-left": "51.77699px",
   },
   "41%": Object {
-    "padding-left": 50.69985,
+    "padding-left": "50.69985px",
   },
   "42%": Object {
-    "padding-left": 49.73937,
+    "padding-left": "49.73937px",
   },
   "43%": Object {
-    "padding-left": 48.89883,
+    "padding-left": "48.89883px",
   },
   "44%": Object {
-    "padding-left": 48.17898,
+    "padding-left": "48.17898px",
   },
   "45%": Object {
-    "padding-left": 47.5783,
+    "padding-left": "47.5783px",
   },
   "46%": Object {
-    "padding-left": 47.09328,
+    "padding-left": "47.09328px",
   },
   "47%": Object {
-    "padding-left": 46.71879,
+    "padding-left": "46.71879px",
   },
   "48%": Object {
-    "padding-left": 46.4483,
+    "padding-left": "46.4483px",
   },
   "49%": Object {
-    "padding-left": 46.2742,
+    "padding-left": "46.2742px",
   },
   "5%": Object {
-    "padding-left": -27.91516,
+    "padding-left": "-27.91516px",
   },
   "50%": Object {
-    "padding-left": 46.18805,
+    "padding-left": "46.18805px",
   },
   "51%": Object {
-    "padding-left": 46.18086,
+    "padding-left": "46.18086px",
   },
   "52%": Object {
-    "padding-left": 46.24327,
+    "padding-left": "46.24327px",
   },
   "53%": Object {
-    "padding-left": 46.36582,
+    "padding-left": "46.36582px",
   },
   "54%": Object {
-    "padding-left": 46.53908,
+    "padding-left": "46.53908px",
   },
   "55%": Object {
-    "padding-left": 46.75384,
+    "padding-left": "46.75384px",
   },
   "56%": Object {
-    "padding-left": 47.00126,
+    "padding-left": "47.00126px",
   },
   "57%": Object {
-    "padding-left": 47.27297,
+    "padding-left": "47.27297px",
   },
   "58%": Object {
-    "padding-left": 47.56116,
+    "padding-left": "47.56116px",
   },
   "59%": Object {
-    "padding-left": 47.85866,
+    "padding-left": "47.85866px",
   },
   "6%": Object {
-    "padding-left": -20.74408,
+    "padding-left": "-20.74408px",
   },
   "60%": Object {
-    "padding-left": 48.15901,
+    "padding-left": "48.15901px",
   },
   "61%": Object {
-    "padding-left": 48.45646,
+    "padding-left": "48.45646px",
   },
   "62%": Object {
-    "padding-left": 48.74599,
+    "padding-left": "48.74599px",
   },
   "63%": Object {
-    "padding-left": 49.02336,
+    "padding-left": "49.02336px",
   },
   "64%": Object {
-    "padding-left": 49.28502,
+    "padding-left": "49.28502px",
   },
   "65%": Object {
-    "padding-left": 49.52815,
+    "padding-left": "49.52815px",
   },
   "66%": Object {
-    "padding-left": 49.75059,
+    "padding-left": "49.75059px",
   },
   "67%": Object {
-    "padding-left": 49.95084,
+    "padding-left": "49.95084px",
   },
   "68%": Object {
-    "padding-left": 50.12794,
+    "padding-left": "50.12794px",
   },
   "69%": Object {
-    "padding-left": 50.28148,
+    "padding-left": "50.28148px",
   },
   "7%": Object {
-    "padding-left": -13.16013,
+    "padding-left": "-13.16013px",
   },
   "70%": Object {
-    "padding-left": 50.41153,
+    "padding-left": "50.41153px",
   },
   "71%": Object {
-    "padding-left": 50.51857,
+    "padding-left": "50.51857px",
   },
   "72%": Object {
-    "padding-left": 50.60343,
+    "padding-left": "50.60343px",
   },
   "73%": Object {
-    "padding-left": 50.66725,
+    "padding-left": "50.66725px",
   },
   "74%": Object {
-    "padding-left": 50.71139,
+    "padding-left": "50.71139px",
   },
   "75%": Object {
-    "padding-left": 50.73744,
+    "padding-left": "50.73744px",
   },
   "76%": Object {
-    "padding-left": 50.74708,
+    "padding-left": "50.74708px",
   },
   "77%": Object {
-    "padding-left": 50.74212,
+    "padding-left": "50.74212px",
   },
   "78%": Object {
-    "padding-left": 50.7244,
+    "padding-left": "50.7244px",
   },
   "79%": Object {
-    "padding-left": 50.69576,
+    "padding-left": "50.69576px",
   },
   "8%": Object {
-    "padding-left": -5.34938,
+    "padding-left": "-5.34938px",
   },
   "80%": Object {
-    "padding-left": 50.65804,
+    "padding-left": "50.65804px",
   },
   "81%": Object {
-    "padding-left": 50.613,
+    "padding-left": "50.613px",
   },
   "82%": Object {
-    "padding-left": 50.56233,
+    "padding-left": "50.56233px",
   },
   "83%": Object {
-    "padding-left": 50.50762,
+    "padding-left": "50.50762px",
   },
   "84%": Object {
-    "padding-left": 50.45033,
+    "padding-left": "50.45033px",
   },
   "85%": Object {
-    "padding-left": 50.39182,
+    "padding-left": "50.39182px",
   },
   "86%": Object {
-    "padding-left": 50.33327,
+    "padding-left": "50.33327px",
   },
   "87%": Object {
-    "padding-left": 50.27575,
+    "padding-left": "50.27575px",
   },
   "88%": Object {
-    "padding-left": 50.22017,
+    "padding-left": "50.22017px",
   },
   "89%": Object {
-    "padding-left": 50.1673,
+    "padding-left": "50.1673px",
   },
   "9%": Object {
-    "padding-left": 2.52037,
+    "padding-left": "2.52037px",
   },
   "90%": Object {
-    "padding-left": 50.11776,
+    "padding-left": "50.11776px",
   },
   "91%": Object {
-    "padding-left": 50.07204,
+    "padding-left": "50.07204px",
   },
   "92%": Object {
-    "padding-left": 50.03052,
+    "padding-left": "50.03052px",
   },
   "93%": Object {
-    "padding-left": 49.99342,
+    "padding-left": "49.99342px",
   },
   "94%": Object {
-    "padding-left": 49.9609,
+    "padding-left": "49.9609px",
   },
   "95%": Object {
-    "padding-left": 49.93298,
+    "padding-left": "49.93298px",
   },
   "96%": Object {
-    "padding-left": 49.90962,
+    "padding-left": "49.90962px",
   },
   "97%": Object {
-    "padding-left": 49.89069,
+    "padding-left": "49.89069px",
   },
   "98%": Object {
-    "padding-left": 49.876,
+    "padding-left": "49.876px",
   },
   "99%": Object {
-    "padding-left": 49.86531,
+    "padding-left": "49.86531px",
   },
 }
 `;
@@ -617,408 +617,307 @@ Object {
 exports[`css-spring matches snapshots 3`] = `
 Object {
   "0%": Object {
-    "margin-right": 0,
-    "padding-left": -50,
+    "margin-right": "0em",
   },
   "1%": Object {
-    "margin-right": 1.524,
-    "padding-left": -48.8,
+    "margin-right": "1.524em",
   },
   "10%": Object {
-    "margin-right": 51.181,
-    "padding-left": -9.7,
+    "margin-right": "51.181em",
   },
   "100%": Object {
-    "margin-right": 127,
-    "padding-left": 50,
+    "margin-right": "127em",
   },
   "11%": Object {
-    "margin-right": 57.971,
-    "padding-left": -4.354,
+    "margin-right": "57.971em",
   },
   "12%": Object {
-    "margin-right": 64.639,
-    "padding-left": 0.897,
+    "margin-right": "64.639em",
   },
   "13%": Object {
-    "margin-right": 71.122,
-    "padding-left": 6.001,
+    "margin-right": "71.122em",
   },
   "14%": Object {
-    "margin-right": 77.367,
-    "padding-left": 10.919,
+    "margin-right": "77.367em",
   },
   "15%": Object {
-    "margin-right": 83.334,
-    "padding-left": 15.618,
+    "margin-right": "83.334em",
   },
   "16%": Object {
-    "margin-right": 88.99,
-    "padding-left": 20.071,
+    "margin-right": "88.99em",
   },
   "17%": Object {
-    "margin-right": 94.31,
-    "padding-left": 24.26,
+    "margin-right": "94.31em",
   },
   "18%": Object {
-    "margin-right": 99.277,
-    "padding-left": 28.171,
+    "margin-right": "99.277em",
   },
   "19%": Object {
-    "margin-right": 103.882,
-    "padding-left": 31.797,
+    "margin-right": "103.882em",
   },
   "2%": Object {
-    "margin-right": 4.34,
-    "padding-left": -46.582,
+    "margin-right": "4.34em",
   },
   "20%": Object {
-    "margin-right": 108.119,
-    "padding-left": 35.133,
+    "margin-right": "108.119em",
   },
   "21%": Object {
-    "margin-right": 111.99,
-    "padding-left": 38.181,
+    "margin-right": "111.99em",
   },
   "22%": Object {
-    "margin-right": 115.499,
-    "padding-left": 40.944,
+    "margin-right": "115.499em",
   },
   "23%": Object {
-    "margin-right": 118.655,
-    "padding-left": 43.429,
+    "margin-right": "118.655em",
   },
   "24%": Object {
-    "margin-right": 121.469,
-    "padding-left": 45.645,
+    "margin-right": "121.469em",
   },
   "25%": Object {
-    "margin-right": 123.955,
-    "padding-left": 47.602,
+    "margin-right": "123.955em",
   },
   "26%": Object {
-    "margin-right": 126.13,
-    "padding-left": 49.315,
+    "margin-right": "126.13em",
   },
   "27%": Object {
-    "margin-right": 128.011,
-    "padding-left": 50.796,
+    "margin-right": "128.011em",
   },
   "28%": Object {
-    "margin-right": 129.616,
-    "padding-left": 52.06,
+    "margin-right": "129.616em",
   },
   "29%": Object {
-    "margin-right": 130.965,
-    "padding-left": 53.122,
+    "margin-right": "130.965em",
   },
   "3%": Object {
-    "margin-right": 8.234,
-    "padding-left": -43.516,
+    "margin-right": "8.234em",
   },
   "30%": Object {
-    "margin-right": 132.078,
-    "padding-left": 53.999,
+    "margin-right": "132.078em",
   },
   "31%": Object {
-    "margin-right": 132.974,
-    "padding-left": 54.704,
+    "margin-right": "132.974em",
   },
   "32%": Object {
-    "margin-right": 133.673,
-    "padding-left": 55.254,
+    "margin-right": "133.673em",
   },
   "33%": Object {
-    "margin-right": 134.194,
-    "padding-left": 55.665,
+    "margin-right": "134.194em",
   },
   "34%": Object {
-    "margin-right": 134.556,
-    "padding-left": 55.95,
+    "margin-right": "134.556em",
   },
   "35%": Object {
-    "margin-right": 134.776,
-    "padding-left": 56.123,
+    "margin-right": "134.776em",
   },
   "36%": Object {
-    "margin-right": 134.873,
-    "padding-left": 56.199,
+    "margin-right": "134.873em",
   },
   "37%": Object {
-    "margin-right": 134.861,
-    "padding-left": 56.19,
+    "margin-right": "134.861em",
   },
   "38%": Object {
-    "margin-right": 134.756,
-    "padding-left": 56.107,
+    "margin-right": "134.756em",
   },
   "39%": Object {
-    "margin-right": 134.574,
-    "padding-left": 55.963,
+    "margin-right": "134.574em",
   },
   "4%": Object {
-    "margin-right": 13.008,
-    "padding-left": -39.757,
+    "margin-right": "13.008em",
   },
   "40%": Object {
-    "margin-right": 134.325,
-    "padding-left": 55.768,
+    "margin-right": "134.325em",
   },
   "41%": Object {
-    "margin-right": 134.024,
-    "padding-left": 55.531,
+    "margin-right": "134.024em",
   },
   "42%": Object {
-    "margin-right": 133.681,
-    "padding-left": 55.26,
+    "margin-right": "133.681em",
   },
   "43%": Object {
-    "margin-right": 133.305,
-    "padding-left": 54.965,
+    "margin-right": "133.305em",
   },
   "44%": Object {
-    "margin-right": 132.907,
-    "padding-left": 54.651,
+    "margin-right": "132.907em",
   },
   "45%": Object {
-    "margin-right": 132.493,
-    "padding-left": 54.325,
+    "margin-right": "132.493em",
   },
   "46%": Object {
-    "margin-right": 132.071,
-    "padding-left": 53.993,
+    "margin-right": "132.071em",
   },
   "47%": Object {
-    "margin-right": 131.648,
-    "padding-left": 53.66,
+    "margin-right": "131.648em",
   },
   "48%": Object {
-    "margin-right": 131.228,
-    "padding-left": 53.329,
+    "margin-right": "131.228em",
   },
   "49%": Object {
-    "margin-right": 130.816,
-    "padding-left": 53.005,
+    "margin-right": "130.816em",
   },
   "5%": Object {
-    "margin-right": 18.482,
-    "padding-left": -35.447,
+    "margin-right": "18.482em",
   },
   "50%": Object {
-    "margin-right": 130.416,
-    "padding-left": 52.69,
+    "margin-right": "130.416em",
   },
   "51%": Object {
-    "margin-right": 130.031,
-    "padding-left": 52.386,
+    "margin-right": "130.031em",
   },
   "52%": Object {
-    "margin-right": 129.663,
-    "padding-left": 52.097,
+    "margin-right": "129.663em",
   },
   "53%": Object {
-    "margin-right": 129.315,
-    "padding-left": 51.823,
+    "margin-right": "129.315em",
   },
   "54%": Object {
-    "margin-right": 128.988,
-    "padding-left": 51.566,
+    "margin-right": "128.988em",
   },
   "55%": Object {
-    "margin-right": 128.683,
-    "padding-left": 51.325,
+    "margin-right": "128.683em",
   },
   "56%": Object {
-    "margin-right": 128.401,
-    "padding-left": 51.103,
+    "margin-right": "128.401em",
   },
   "57%": Object {
-    "margin-right": 128.141,
-    "padding-left": 50.898,
+    "margin-right": "128.141em",
   },
   "58%": Object {
-    "margin-right": 127.903,
-    "padding-left": 50.711,
+    "margin-right": "127.903em",
   },
   "59%": Object {
-    "margin-right": 127.689,
-    "padding-left": 50.542,
+    "margin-right": "127.689em",
   },
   "6%": Object {
-    "margin-right": 24.491,
-    "padding-left": -30.715,
+    "margin-right": "24.491em",
   },
   "60%": Object {
-    "margin-right": 127.496,
-    "padding-left": 50.39,
+    "margin-right": "127.496em",
   },
   "61%": Object {
-    "margin-right": 127.324,
-    "padding-left": 50.255,
+    "margin-right": "127.324em",
   },
   "62%": Object {
-    "margin-right": 127.172,
-    "padding-left": 50.135,
+    "margin-right": "127.172em",
   },
   "63%": Object {
-    "margin-right": 127.039,
-    "padding-left": 50.031,
+    "margin-right": "127.039em",
   },
   "64%": Object {
-    "margin-right": 126.925,
-    "padding-left": 49.941,
+    "margin-right": "126.925em",
   },
   "65%": Object {
-    "margin-right": 126.827,
-    "padding-left": 49.864,
+    "margin-right": "126.827em",
   },
   "66%": Object {
-    "margin-right": 126.746,
-    "padding-left": 49.8,
+    "margin-right": "126.746em",
   },
   "67%": Object {
-    "margin-right": 126.678,
-    "padding-left": 49.747,
+    "margin-right": "126.678em",
   },
   "68%": Object {
-    "margin-right": 126.624,
-    "padding-left": 49.704,
+    "margin-right": "126.624em",
   },
   "69%": Object {
-    "margin-right": 126.582,
-    "padding-left": 49.671,
+    "margin-right": "126.582em",
   },
   "7%": Object {
-    "margin-right": 30.89,
-    "padding-left": -25.677,
+    "margin-right": "30.89em",
   },
   "70%": Object {
-    "margin-right": 126.551,
-    "padding-left": 49.647,
+    "margin-right": "126.551em",
   },
   "71%": Object {
-    "margin-right": 126.53,
-    "padding-left": 49.63,
+    "margin-right": "126.53em",
   },
   "72%": Object {
-    "margin-right": 126.517,
-    "padding-left": 49.62,
+    "margin-right": "126.517em",
   },
   "73%": Object {
-    "margin-right": 126.512,
-    "padding-left": 49.616,
+    "margin-right": "126.512em",
   },
   "74%": Object {
-    "margin-right": 126.514,
-    "padding-left": 49.617,
+    "margin-right": "126.514em",
   },
   "75%": Object {
-    "margin-right": 126.521,
-    "padding-left": 49.623,
+    "margin-right": "126.521em",
   },
   "76%": Object {
-    "margin-right": 126.532,
-    "padding-left": 49.632,
+    "margin-right": "126.532em",
   },
   "77%": Object {
-    "margin-right": 126.548,
-    "padding-left": 49.644,
+    "margin-right": "126.548em",
   },
   "78%": Object {
-    "margin-right": 126.567,
-    "padding-left": 49.659,
+    "margin-right": "126.567em",
   },
   "79%": Object {
-    "margin-right": 126.589,
-    "padding-left": 49.676,
+    "margin-right": "126.589em",
   },
   "8%": Object {
-    "margin-right": 37.545,
-    "padding-left": -20.437,
+    "margin-right": "37.545em",
   },
   "80%": Object {
-    "margin-right": 126.612,
-    "padding-left": 49.695,
+    "margin-right": "126.612em",
   },
   "81%": Object {
-    "margin-right": 126.637,
-    "padding-left": 49.714,
+    "margin-right": "126.637em",
   },
   "82%": Object {
-    "margin-right": 126.663,
-    "padding-left": 49.734,
+    "margin-right": "126.663em",
   },
   "83%": Object {
-    "margin-right": 126.689,
-    "padding-left": 49.755,
+    "margin-right": "126.689em",
   },
   "84%": Object {
-    "margin-right": 126.715,
-    "padding-left": 49.776,
+    "margin-right": "126.715em",
   },
   "85%": Object {
-    "margin-right": 126.741,
-    "padding-left": 49.796,
+    "margin-right": "126.741em",
   },
   "86%": Object {
-    "margin-right": 126.767,
-    "padding-left": 49.816,
+    "margin-right": "126.767em",
   },
   "87%": Object {
-    "margin-right": 126.791,
-    "padding-left": 49.836,
+    "margin-right": "126.791em",
   },
   "88%": Object {
-    "margin-right": 126.815,
-    "padding-left": 49.854,
+    "margin-right": "126.815em",
   },
   "89%": Object {
-    "margin-right": 126.838,
-    "padding-left": 49.872,
+    "margin-right": "126.838em",
   },
   "9%": Object {
-    "margin-right": 44.343,
-    "padding-left": -15.084,
+    "margin-right": "44.343em",
   },
   "90%": Object {
-    "margin-right": 126.859,
-    "padding-left": 49.889,
+    "margin-right": "126.859em",
   },
   "91%": Object {
-    "margin-right": 126.879,
-    "padding-left": 49.905,
+    "margin-right": "126.879em",
   },
   "92%": Object {
-    "margin-right": 126.898,
-    "padding-left": 49.92,
+    "margin-right": "126.898em",
   },
   "93%": Object {
-    "margin-right": 126.915,
-    "padding-left": 49.933,
+    "margin-right": "126.915em",
   },
   "94%": Object {
-    "margin-right": 126.931,
-    "padding-left": 49.946,
+    "margin-right": "126.931em",
   },
   "95%": Object {
-    "margin-right": 126.946,
-    "padding-left": 49.957,
+    "margin-right": "126.946em",
   },
   "96%": Object {
-    "margin-right": 126.959,
-    "padding-left": 49.968,
+    "margin-right": "126.959em",
   },
   "97%": Object {
-    "margin-right": 126.971,
-    "padding-left": 49.977,
+    "margin-right": "126.971em",
   },
   "98%": Object {
-    "margin-right": 126.981,
-    "padding-left": 49.985,
+    "margin-right": "126.981em",
   },
   "99%": Object {
-    "margin-right": 126.99,
-    "padding-left": 49.992,
+    "margin-right": "126.99em",
   },
 }
 `;

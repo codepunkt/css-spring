@@ -104,15 +104,19 @@ calculating the animation:
 #### Arguments
   
   - `startProps` (_Object_): The start properties for the animation.<br>
+  
     ```javascript
     // `startProps` example
     { 'margin-left': '0px', opacity: 0 }
     ```
+      
   - `endProps` (_Object_): The end properties for the animation.<br>
+
     ```javascript
     // `endProps` example
     { 'margin-left': '250px', opacity: 1 }
     ```
+
   - `options` (_Object_, optional): Animation options with these properties:
     - `precision` (_Number_, optional, defaults to `3`) Specifies the number of decimals in the rounding of interpolated values.
     - `preset` (_String_, optional): Presets for `stiffness` and `damping`, overriding any stiffness and damping values given. Available presets:
@@ -146,6 +150,7 @@ This method takes the return value of `spring` and converts it to a css string.
 
   - `keyframes` (_Object_): The interpolated animation values object given by `spring`.
   - `formatter` (_Function_, optional): The formatter function that is invoked for every property/value combination.
+    
     ```javascript
     // default formatter
     (property, value) => `${property}:${value};`

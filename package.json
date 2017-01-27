@@ -21,7 +21,9 @@
     "lint": "eslint src",
     "test": "jest --coverage"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",

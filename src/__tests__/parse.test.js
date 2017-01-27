@@ -1,4 +1,4 @@
-import { getAnimatableProps } from '../props'
+import { getAnimatableProps } from '../parse'
 
 describe('getAnimatableProps', () => {
   test('omits keys that do not exist in both startProps and endProps', () => {

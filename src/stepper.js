@@ -3,7 +3,7 @@
 const reusedTuple = [ 0, 0 ]
 
 // eslint-disable-next-line max-params
-export default (secondPerFrame, x, v, destX, k, b, precision = 0.01) => {
+const stepper = (secondPerFrame, x, v, destX, k, b, precision = 0.01) => {
   // Spring stiffness, in kg / s^2
 
   // for animations, destX is really spring length (spring at rest). initial
@@ -21,6 +21,8 @@ export default (secondPerFrame, x, v, destX, k, b, precision = 0.01) => {
   const newV = v + (a * secondPerFrame)
   const newX = x + (newV * secondPerFrame)
 
+  stepper.count += 1
+
   if (Math.abs(newV) < precision && Math.abs(newX - destX) < precision) {
     reusedTuple[0] = destX
     reusedTuple[1] = 0
@@ -31,3 +33,6 @@ export default (secondPerFrame, x, v, destX, k, b, precision = 0.01) => {
   reusedTuple[1] = newV
   return reusedTuple
 }
+
+stepper.count = 0
+export default stepper

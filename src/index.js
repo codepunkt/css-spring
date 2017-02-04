@@ -1,6 +1,6 @@
-import { isArray, mapKeys, mapValues, pickBy } from 'lodash'
-import stepper from './stepper'
+import { isArray, isEmpty, mapKeys, mapValues, negate, pickBy, uniq } from 'lodash'
 import { combine } from './values'
+import interpolate from './interpolate'
 import { getAnimatableProps } from './parse'
 
 // spring presets. selected combinations of stiffness/damping.
@@ -21,13 +21,6 @@ const defaultOptions = {
   precision: 2,
 }
 
-export const appendUnits = (object, units) =>
-  mapValues(object, (value, key) => {
-    return isArray(value)
-      ? value.map((value, i) => `${value}${units[key][i]}`)
-      : `${value}${units[key]}`
-  })
-
 // @todo comment
 const buildInterpolation = (stiffness, damping) => {
   return (start, end) => {
@@ -41,12 +34,12 @@ const buildInterpolation = (stiffness, damping) => {
         let something
         for (let j = 0; j < start.length; j += 1) {
           something = [];
-          [ value, velocity ] = stepper(0.01, value, velocity, end[j], stiffness, damping)
+          [ value, velocity ] = interpolate(0.01, value, velocity, end[j], stiffness, damping)
           something.push(value)
         }
         interpolated.push(something)
       } else {
-        [ value, velocity ] = stepper(0.01, value, velocity, end, stiffness, damping)
+        [ value, velocity ] = interpolate(0.01, value, velocity, end, stiffness, damping)
         interpolated.push(value)
       }
     }
@@ -92,29 +85,59 @@ export const spring = (startProps, endProps, options = {}) => {
 
   // iterate over the result object, combining values and identifying
   // equal frames to be able to eliminate duplicates in a later step
-  let prevFrame
-  const obsoleteFrames = []
-  Object.keys(result).forEach((i) => {
-    const currentFrame = JSON.stringify(result[i])
-    result[i] = mapValues(result[i], (value, key) => combine(key, value))
-    if (prevFrame === currentFrame) {
-      obsoleteFrames.push(i - 1)
-    }
-    prevFrame = currentFrame
+  // let prevFrame
+  // const obsoleteFrames = []
+  // Object.keys(result).forEach((i) => {
+  //   const currentFrame = JSON.stringify(result[i])
+  //   result[i] = mapValues(result[i], (value, key) => combine(key, value))
+  //   if (prevFrame === currentFrame) {
+  //     obsoleteFrames.push(i - 1)
+  //   }
+  //   prevFrame = currentFrame
+  // })
+
+  const props = uniq(data.map(({ prop }) => prop))
+  const obsoleteValues = []
+
+  // iterate over the result object for each interpolated css property,
+  // combining values and identifying equal ones to be able to eliminate
+  // them in a later step
+  props.forEach((prop) => {
+    let prevValue
+    Object.keys(result).forEach((i) => {
+      // get the value of the interpolated property in this frame
+      const currentValue = JSON.stringify(result[i][prop])
+      obsoleteValues[i] = obsoleteValues[i] || []
+      result[i] = mapValues(result[i], (value, key) => combine(key, value))
+      if (prevValue === currentValue && Number(i) !== 100) {
+        obsoleteValues[i].push(prop)
+      }
+      prevValue = currentValue
+    })
   })
 
-  // remove obsolute frames to reduce size and add % to keys
+  // remove obsolute properties and frames to reduce size and add % to keys
   // @todo might chain this - not using chain.
   // @see https://medium.com/making-internets/why-using-chain-is-a-mistake-9bc1f80d51ba
-  result = mapKeys(
-    pickBy(result, (value, key) => obsoleteFrames.indexOf(Number(key)) < 0),
-    (value, key) => `${key}%`
+  result = pickBy(
+    mapKeys(
+      mapValues(result, (value, key) => {
+        return pickBy(
+          value,
+          (propValue, propName) => obsoleteValues[Number(key)].indexOf(propName) < 0
+        )
+      }),
+      (value, key) => `${key}%`
+    ),
+    (frame) => negate(isEmpty)(frame)
   )
 
-  console.log(result)
+  // console.log(result)
+
   return result
 }
 
+console.time('interpolate')
 spring({
   left: '10px',
   right: '20px',
@@ -126,6 +149,7 @@ spring({
 }, {
   preset: 'noWobble',
 })
+console.timeEnd('interpolate')
 
 export { default as toString } from './to-string'
 export default spring

@@ -1,7 +1,22 @@
-import { isArray, isEmpty, mapKeys, mapValues, negate, pickBy, uniq } from 'lodash'
-import { combine } from './values'
-import interpolate from './interpolate'
-import { getAnimatableProps } from './parse'
+import {
+  isNil,
+  mapValues,
+  pickBy,
+} from 'lodash'
+
+import {
+  combine,
+  parseStyles,
+} from './parse'
+
+import {
+  addValueToProperty,
+  appendToKeys,
+  calculateObsoleteValues,
+  getInterpolator,
+  omitEmptyValues,
+  toString,
+} from './util'
 
 // spring presets. selected combinations of stiffness/damping.
 const presets = {
@@ -21,34 +36,11 @@ const defaultOptions = {
   precision: 2,
 }
 
-// @todo comment
-const buildInterpolation = (stiffness, damping) => {
-  return (start, end) => {
-    const interpolated = []
-    const interpolateArray = isArray(start)
-    let value = interpolateArray ? start[0] : start
-    let velocity = 0
-
-    for (let i = 1; i < 100; i += 1) {
-      if (interpolateArray) {
-        let something
-        for (let j = 0; j < start.length; j += 1) {
-          something = [];
-          [ value, velocity ] = interpolate(0.01, value, velocity, end[j], stiffness, damping)
-          something.push(value)
-        }
-        interpolated.push(something)
-      } else {
-        [ value, velocity ] = interpolate(0.01, value, velocity, end, stiffness, damping)
-        interpolated.push(value)
-      }
-    }
-
-    return [].concat(start, interpolated, end)
-  }
-}
-
-export const spring = (startProps, endProps, options = {}) => {
+// css-spring
+// ----------
+// invoke with startStyles, endStyles and options and gain a keyframe
+// style object with interpolated values.
+export const spring = (startStyles, endStyles, options = {}) => {
   let result = {}
 
   // define stiffness, damping and precision based on default options
@@ -60,96 +52,67 @@ export const spring = (startProps, endProps, options = {}) => {
     presets[options.preset] || {}
   )
 
-  // build an interpolation function based on the given stiffness and
-  // damping values
-  const interpolate = buildInterpolation(stiffness, damping)
+  // get an interpolation function and parse start- and end styles
+  const interpolate = getInterpolator(stiffness, damping)
+  const parsed = parseStyles(startStyles, endStyles)
 
-  // @todo comment!
-  const data = getAnimatableProps(startProps, endProps)
-  data.forEach(({ prop, unit, start, end }) => {
-    interpolate(start, end).forEach((interpolated, i) => {
-      // round to desired precision (except when interpolating pixels)
-      const value = Number(interpolated.toFixed(unit === 'px' ? 0 : precision))
-      // when the value is 0, there's no need to add a unit.
-      const valueWithUnit = value === 0 ? value : `${value}${unit}`
-
-      if (result[i] === undefined) {
-        result[i] = { [prop]: valueWithUnit }
-      } else {
-        result[i][prop] = result[i][prop] === undefined
-          ? valueWithUnit
-          : [].concat(result[i][prop], valueWithUnit)
+  // build keyframe styles based on parsed properties
+  parsed.forEach(({ prop, unit, start, end, fixed }) => {
+    // if start and end values differ, interpolate between them
+    if (!isNil(start) && !isNil(end)) {
+      interpolate(start, end).forEach((interpolated, i) => {
+        // round to desired precision (except when interpolating pixels)
+        let value = Number(interpolated.toFixed(unit === 'px' ? 0 : precision))
+        // add unit when applicable
+        value = value === 0 || !unit ? value : `${value}${unit}`
+        result[i] = addValueToProperty(result[i], prop, value)
+      })
+    // otherwise the value is fixed and can directly be appended to the
+    // resulting keyframe styles
+    } else if (!isNil(fixed)) {
+      for (let i = 0; i < 101; i += 1) {
+        result[i] = addValueToProperty(result[i], prop, fixed)
       }
-    })
+    }
   })
 
-  // iterate over the result object, combining values and identifying
-  // equal frames to be able to eliminate duplicates in a later step
-  // let prevFrame
-  // const obsoleteFrames = []
-  // Object.keys(result).forEach((i) => {
-  //   const currentFrame = JSON.stringify(result[i])
-  //   result[i] = mapValues(result[i], (value, key) => combine(key, value))
-  //   if (prevFrame === currentFrame) {
-  //     obsoleteFrames.push(i - 1)
-  //   }
-  //   prevFrame = currentFrame
-  // })
-
-  const props = uniq(data.map(({ prop }) => prop))
-  const obsoleteValues = []
-
-  // iterate over the result object for each interpolated css property,
-  // combining values and identifying equal ones to be able to eliminate
-  // them in a later step
-  props.forEach((prop) => {
-    let prevValue
-    Object.keys(result).forEach((i) => {
-      // get the value of the interpolated property in this frame
-      const currentValue = JSON.stringify(result[i][prop])
-      obsoleteValues[i] = obsoleteValues[i] || []
-      result[i] = mapValues(result[i], (value, key) => combine(key, value))
-      if (prevValue === currentValue && Number(i) !== 100) {
-        obsoleteValues[i].push(prop)
-      }
-      prevValue = currentValue
-    })
+  // remove obsolete values, combine multiple values for the same property
+  // to single ones and append % to the object keys
+  const obsoleteValues = calculateObsoleteValues(result)
+  result = mapValues(result, (value, i) => {
+    const result = mapValues(value, (value, key) => combine(key, value))
+    return pickBy(result, (_, property) => obsoleteValues[property].indexOf(Number(i)) < 0)
   })
-
-  // remove obsolute properties and frames to reduce size and add % to keys
-  // @todo might chain this - not using chain.
-  // @see https://medium.com/making-internets/why-using-chain-is-a-mistake-9bc1f80d51ba
-  result = pickBy(
-    mapKeys(
-      mapValues(result, (value, key) => {
-        return pickBy(
-          value,
-          (propValue, propName) => obsoleteValues[Number(key)].indexOf(propName) < 0
-        )
-      }),
-      (value, key) => `${key}%`
-    ),
-    (frame) => negate(isEmpty)(frame)
-  )
+  result = omitEmptyValues(result)
+  result = appendToKeys(result, '%')
 
   // console.log(result)
-
   return result
 }
 
-console.time('interpolate')
-spring({
-  left: '10px',
-  right: '20px',
-  padding: '0 0 10px 10rem',
-}, {
-  left: '20px',
-  right: 0,
-  padding: '10em 10em 0 20rem',
-}, {
-  preset: 'noWobble',
-})
-console.timeEnd('interpolate')
+// console.time('interpolate')
+// spring({
+//   left: '10px',
+//   right: '20px',
+//   padding: '0 0 10px 10rem',
+//   opacity: 0,
+// }, {
+//   left: '20px',
+//   right: 0,
+//   padding: '10em 10em 0 20rem',
+//   opacity: 1,
+// }, {
+//   preset: 'noWobble',
+// })
+// console.timeEnd('interpolate')
 
-export { default as toString } from './to-string'
+// console.time('interpolate 2')
+// spring(
+//   { 'margin-left': `250px`, border: '1px solid #f00' },
+//   { 'margin-left': 0, border: '10px solid #f00' },
+//   { preset: 'gentle' },
+// )
+// console.timeEnd('interpolate 2')
+
+export { toString }
 export default spring

@@ -1,5 +1,8 @@
-import { split } from './values'
-import { isArray, map } from 'lodash'
+import {
+  compact,
+  isArray,
+  map,
+} from 'lodash'
 
 // this splits css numbers from units.
 // according to the css spec, a number can either be an integer or it can be
@@ -7,12 +10,55 @@ import { isArray, map } from 'lodash'
 // assuming the unit can be any sequence of lowercase letters (including none)
 const numberUnitSplit = /^([+-]?(?:\d+|\d*\.\d+))([a-z]*|%)$/
 
-// WAT
-const parseUnit = (startProp, endProp) => {
-  const startMatches = startProp.toString().match(numberUnitSplit)
-  const endMatches = endProp.toString().match(numberUnitSplit)
+// css properties that can have values joined by spaces
+const spaceCombinedProps = [
+  '-moz-outline-radius',
+  '-webkit-text-stroke',
+  'background',
+  'border',
+  'border-bottom',
+  'border-color',
+  'border-left',
+  'border-radius',
+  'border-right',
+  'border-spacing',
+  'border-top',
+  'border-width',
+  'margin',
+  'outline',
+  'padding',
+]
 
-  // when start and end match css number with optional unit
+// splits a css property value into multiple values
+export const split = (key, value) => {
+  if (spaceCombinedProps.indexOf(key) >= 0) {
+    const arr = value.split(' ')
+    return arr.length === 1 ? arr[0] : arr
+  }
+
+  return value
+}
+
+// combines multiple values to a single css property value
+export const combine = (key, value) => {
+  return isArray(value) && spaceCombinedProps.indexOf(key) >= 0 ? value.join(' ') : value
+}
+
+// parses css startValue and endValue.
+//
+// returns an object consisting of start and end values for interpolation
+// and an additional unit if the start and end values are numeric. in cases
+// of unchanged values, returns the fixed value
+export const parseValues = (startValue, endValue) => {
+  // when both values are equal, the value is fixed
+  if (startValue === endValue) {
+    return { fixed: startValue }
+  }
+
+  // check if both values are numeric with optional unit
+  const startMatches = startValue.toString().match(numberUnitSplit)
+  const endMatches = endValue.toString().match(numberUnitSplit)
+
   if (startMatches && endMatches) {
     const startUnit = startMatches[2]
     const endUnit = endMatches[2]
@@ -28,47 +74,39 @@ const parseUnit = (startProp, endProp) => {
   }
 }
 
-// returns an object that lists the unit, start and end values of the
-// animatable properties based on the given arguments.
-// to be animatable, a property has to be present on both `startProps` and
+// returns an object that lists the property, unit, start and end values of
+// the animatable properties based on the given arguments.
+//
+// to be animatable, a property has to be present on both `startStyles` and
 // `endProps` with a numeric value and same unit for both or unitless for one
 // of them which will then take the unit of the other.
-export const getAnimatableProps = (startProps, endProps) => {
+export const parseStyles = (startStyles, endStyles) => {
   let result = []
 
-  // @todo check if props are listed in animatable properties!
-  // @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
-  // @see https://github.com/gilmoreorless/css-animated-properties
-  for (let prop in startProps) {
-    if (prop in endProps) {
-      const startProp = split(prop, startProps[prop])
-      const endProp = split(prop, endProps[prop])
+  for (let prop in startStyles) {
+    // only animate props that exist in both start and end styles
+    if (!(prop in endStyles)) {
+      break
+    }
 
-      if (isArray(startProp) && isArray(endProp) && startProp.length === endProp.length) {
-        // array of values
-        const temp = []
-        for (let key in startProp) {
-          if ({}.hasOwnProperty.call(startProp, key)) {
-            const parsed = parseUnit(startProp[key], endProp[key])
+    // in case of combined values, split them!
+    const startValues = [].concat(split(prop, startStyles[prop]))
+    const endValues = [].concat(split(prop, endStyles[prop]))
 
-            if (parsed) {
-              const { unit, start, end } = parsed
-              temp.push({ prop, unit, start, end })
-            }
-          }
-        }
-        if (temp.length === startProp.length) {
-          result = result.concat(temp)
-        }
-      } else {
-        // probably single values
-        const parsed = parseUnit(startProp, endProp)
+    // only animate props that have the same number of values
+    if (startValues.length !== endValues.length) {
+      break
+    }
 
-        if (parsed) {
-          const { unit, start, end } = parsed
-          result.push({ prop, unit, start, end })
-        }
-      }
+    // parse start and end value combinations
+    const parsedValues = compact(map(startValues, (value, key) => {
+      const parsed = parseValues(value, endValues[key])
+      return parsed ? { prop, ...parsed } : null
+    }))
+
+    // when parsing was successful for every combination, use the results
+    if (parsedValues.length === startValues.length) {
+      result = result.concat(parsedValues)
     }
   }
 

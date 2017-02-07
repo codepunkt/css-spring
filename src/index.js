@@ -1,7 +1,24 @@
-import stepper from './stepper'
-import { mapValues } from './util'
-import { getAnimatableProps } from './props'
+import {
+  isNil,
+  mapValues,
+  pickBy,
+} from 'lodash'
 
+import {
+  combine,
+  parseStyles,
+} from './parse'
+
+import {
+  addValueToProperty,
+  appendToKeys,
+  calculateObsoleteValues,
+  getInterpolator,
+  omitEmptyValues,
+  toString,
+} from './util'
+
+// spring presets. selected combinations of stiffness/damping.
 const presets = {
   noWobble: { stiffness: 170, damping: 26 },
   gentle: { stiffness: 120, damping: 14 },
@@ -11,15 +28,21 @@ const presets = {
 
 // default spring options.
 // damping and precision reflect the values of the `wobbly` preset,
-// precision defaults to 3 which should be a good tradeoff between
+// precision defaults to 2 which should be a good tradeoff between
 // animation detail and resulting filesize.
 const defaultOptions = {
   stiffness: 180,
   damping: 12,
-  precision: 3,
+  precision: 2,
 }
 
-export const spring = (startProps, endProps, options = {}) => {
+// css-spring
+// ----------
+// invoke with startStyles, endStyles and options and gain a keyframe
+// style object with interpolated values.
+export const spring = (startStyles, endStyles, options = {}) => {
+  let result = {}
+
   // define stiffness, damping and precision based on default options
   // and options given in arguments.
   const { stiffness, damping, precision } = Object.assign(
@@ -29,51 +52,67 @@ export const spring = (startProps, endProps, options = {}) => {
     presets[options.preset] || {}
   )
 
-  const animatableProps = getAnimatableProps(startProps, endProps)
-  const startValues = mapValues(animatableProps, ({ start }) => start)
-  const endValues = mapValues(animatableProps, ({ end }) => end)
+  // get an interpolation function and parse start- and end styles
+  const interpolate = getInterpolator(stiffness, damping)
+  const parsed = parseStyles(startStyles, endStyles)
 
-  const addUnits = (object) =>
-    mapValues(object, (v, k) => `${v}${animatableProps[k].unit}`)
-
-  const keyframes = {
-    '0%': addUnits(startValues),
-    '100%': addUnits(endValues),
-  }
-
-  Object.keys(startValues).forEach((key) => {
-    let velocity = 0
-    let value = startValues[key]
-    const end = endValues[key]
-
-    for (let i = 1; i < 100; i += 1) {
-      [ value, velocity ] = stepper(0.01, value, velocity, end, stiffness, damping)
-      const percent = `${i}%`
-      keyframes[percent] = Object.assign(
-        keyframes[percent] || {},
-        { [key]: `${Number(value.toFixed(precision))}${animatableProps[key].unit}` }
-      )
+  // build keyframe styles based on parsed properties
+  parsed.forEach(({ prop, unit, start, end, fixed }) => {
+    // if start and end values differ, interpolate between them
+    if (!isNil(start) && !isNil(end)) {
+      interpolate(start, end).forEach((interpolated, i) => {
+        // round to desired precision (except when interpolating pixels)
+        let value = Number(interpolated.toFixed(unit === 'px' ? 0 : precision))
+        // add unit when applicable
+        value = value === 0 || !unit ? value : `${value}${unit}`
+        result[i] = addValueToProperty(result[i], prop, value)
+      })
+    // otherwise the value is fixed and can directly be appended to the
+    // resulting keyframe styles
+    } else if (!isNil(fixed)) {
+      for (let i = 0; i < 101; i += 1) {
+        result[i] = addValueToProperty(result[i], prop, fixed)
+      }
     }
   })
 
-  return keyframes
+  // remove obsolete values, combine multiple values for the same property
+  // to single ones and append % to the object keys
+  const obsoleteValues = calculateObsoleteValues(result)
+  result = mapValues(result, (value, i) => {
+    const result = mapValues(value, (value, key) => combine(key, value))
+    return pickBy(result, (_, property) => obsoleteValues[property].indexOf(Number(i)) < 0)
+  })
+  result = omitEmptyValues(result)
+  result = appendToKeys(result, '%')
+
+  // console.log(result)
+  return result
 }
 
-// console.log(spring({
+// console.time('interpolate')
+// spring({
 //   left: '10px',
-//   right: '20em',
-//   foo: 'bar',
+//   right: '20px',
+//   padding: '0 0 10px 10rem',
 //   opacity: 0,
-//   rotate: '5deg'
 // }, {
 //   left: '20px',
-//   right: '30em',
-//   baz: true,
+//   right: 0,
+//   padding: '10em 10em 0 20rem',
 //   opacity: 1,
-//   rotate: '10deg'
 // }, {
-//   preset: 'noWobble'
-// }))
+//   preset: 'noWobble',
+// })
+// console.timeEnd('interpolate')
 
-export { default as toString } from './to-string'
+// console.time('interpolate 2')
+// spring(
+//   { 'margin-left': `250px`, border: '1px solid #f00' },
+//   { 'margin-left': 0, border: '10px solid #f00' },
+//   { preset: 'gentle' },
+// )
+// console.timeEnd('interpolate 2')
+
+export { toString }
 export default spring

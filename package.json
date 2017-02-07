@@ -2,7 +2,7 @@
   "name": "css-spring",
   "version": "3.0.0",
   "description": "Generate physics based css-keyframe animations",
-  "main": "build/index.js",
+  "main": "dist/css-spring.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codepunkt/css-spring.git"
@@ -17,22 +17,29 @@
     "spring"
   ],
   "scripts": {
-    "build": "babel src --out-dir build",
-    "lint": "eslint src",
-    "test": "jest --coverage"
+    "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
+    "lint": "cross-env eslint src",
+    "test": "cross-env jest --coverage"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-lodash": "^3.2.11",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-preset-es2015": "^6.18.0",
     "coveralls": "^2.11.15",
+    "cross-env": "^3.1.4",
     "eslint": "^3.14.1",
     "eslint-config-xo": "^0.17.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-unicorn": "^1.0.0",
-    "jest": "^18.1.0"
+    "jest": "^18.1.0",
+    "lodash-webpack-plugin": "^0.11.0",
+    "webpack": "^2.2.1"
   },
   "jest": {
     "testPathDirs": [

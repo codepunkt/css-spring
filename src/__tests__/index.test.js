@@ -15,9 +15,11 @@ describe('css-spring', () => {
       spring(
         {
           'padding-left': '-50px',
+          background: '#bada55',
         },
         {
           'padding-left': '50px',
+          background: '#f00',
         },
         {
           preset: 'wobbly',

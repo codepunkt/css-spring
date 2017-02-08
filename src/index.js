@@ -15,6 +15,7 @@ import {
   calculateObsoleteValues,
   getInterpolator,
   omitEmptyValues,
+  rgbFloatToHex,
   toString,
 } from './util'
 
@@ -57,7 +58,7 @@ export const spring = (startStyles, endStyles, options = {}) => {
   const parsed = parseStyles(startStyles, endStyles)
 
   // build keyframe styles based on parsed properties
-  parsed.forEach(({ prop, unit, start, end, fixed }) => {
+  parsed.forEach(({ prop, unit, start, end, rgb, fixed }) => {
     // if start and end values differ, interpolate between them
     if (!isNil(start) && !isNil(end)) {
       interpolate(start, end).forEach((interpolated, i) => {
@@ -66,6 +67,17 @@ export const spring = (startStyles, endStyles, options = {}) => {
         // add unit when applicable
         value = value === 0 || !unit ? value : `${value}${unit}`
         result[i] = addValueToProperty(result[i], prop, value)
+      })
+    // if hex representations of rgb colors are found
+    } else if (!isNil(rgb)) {
+      // interpolate each color component separately
+      const r = interpolate(rgb[0][0], rgb[1][0])
+      const g = interpolate(rgb[0][1], rgb[1][1])
+      const b = interpolate(rgb[0][2], rgb[1][2])
+      r.forEach((interpolated, i) => {
+        const toRgb = rgbFloatToHex
+        result[i] = addValueToProperty(result[i], prop,
+          `#${toRgb(r[i])}${toRgb(g[i])}${toRgb(b[i])}`)
       })
     // otherwise the value is fixed and can directly be appended to the
     // resulting keyframe styles
@@ -81,7 +93,10 @@ export const spring = (startStyles, endStyles, options = {}) => {
   const obsoleteValues = calculateObsoleteValues(result)
   result = mapValues(result, (value, i) => {
     const result = mapValues(value, (value, key) => combine(key, value))
-    return pickBy(result, (_, property) => obsoleteValues[property].indexOf(Number(i)) < 0)
+    return pickBy(
+      result,
+      (_, property) => obsoleteValues[property].indexOf(Number(i)) < 0,
+    )
   })
   result = omitEmptyValues(result)
   result = appendToKeys(result, '%')
@@ -109,7 +124,7 @@ export const spring = (startStyles, endStyles, options = {}) => {
 // console.time('interpolate 2')
 // spring(
 //   { 'margin-left': `250px`, border: '1px solid #f00' },
-//   { 'margin-left': 0, border: '10px solid #f00' },
+//   { 'margin-left': 0, border: '10px solid #bada55' },
 //   { preset: 'gentle' },
 // )
 // console.timeEnd('interpolate 2')

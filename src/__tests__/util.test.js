@@ -5,6 +5,7 @@ import {
   calculateObsoleteValues,
   getInterpolator,
   omitEmptyValues,
+  rgbFloatToHex,
   toString,
 } from '../util'
 
@@ -106,6 +107,15 @@ describe('util', () => {
 
       expect(formatted)
         .toEqual('0%{opacity:0;left:20px;}100%{opacity:1;left:200px;}')
+    })
+  })
+
+  describe('rgbFloatToHex', () => {
+    test('converts floats to hex, prepends 0 to single digit results', () => {
+      expect(rgbFloatToHex(15)).toEqual('0f')
+      expect(rgbFloatToHex(254)).toEqual('fe')
+      expect(rgbFloatToHex(500)).toEqual('ff')
+      expect(rgbFloatToHex(-6)).toEqual('00')
     })
   })
 })

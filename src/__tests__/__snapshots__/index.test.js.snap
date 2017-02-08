@@ -189,33 +189,43 @@ Object {
 exports[`css-spring matches snapshots 2`] = `
 Object {
   "0%": Object {
+    "background": "#bbd653",
     "padding-left": "-48px",
   },
   "1%": Object {
+    "background": "#becf51",
     "padding-left": "-45px",
   },
   "10%": Object {
+    "background": "#e9461b",
     "padding-left": "18px",
   },
   "100%": Object {
+    "background": "#ff0000",
     "padding-left": "50px",
   },
   "11%": Object {
+    "background": "#ee3615",
     "padding-left": "25px",
   },
   "12%": Object {
+    "background": "#f3270f",
     "padding-left": "32px",
   },
   "13%": Object {
+    "background": "#f71a0a",
     "padding-left": "38px",
   },
   "14%": Object {
+    "background": "#fb0d05",
     "padding-left": "44px",
   },
   "15%": Object {
+    "background": "#fe0201",
     "padding-left": "49px",
   },
   "16%": Object {
+    "background": "#ff0000",
     "padding-left": "54px",
   },
   "17%": Object {
@@ -228,6 +238,7 @@ Object {
     "padding-left": "64px",
   },
   "2%": Object {
+    "background": "#c1c54d",
     "padding-left": "-40px",
   },
   "20%": Object {
@@ -261,6 +272,7 @@ Object {
     "padding-left": "66px",
   },
   "3%": Object {
+    "background": "#c5b848",
     "padding-left": "-34px",
   },
   "30%": Object {
@@ -294,72 +306,117 @@ Object {
     "padding-left": "52px",
   },
   "4%": Object {
+    "background": "#c9aa42",
     "padding-left": "-28px",
   },
   "40%": Object {
+    "background": "#ff0000",
     "padding-left": "51px",
   },
   "41%": Object {
+    "background": "#ff0100",
     "padding-left": "50px",
   },
   "42%": Object {
+    "background": "#fe0201",
     "padding-left": "49px",
   },
   "43%": Object {
+    "background": "#fe0402",
     "padding-left": "48px",
   },
   "44%": Object {
+    "background": "#fd0502",
     "padding-left": "48px",
   },
   "45%": Object {
+    "background": "#fd0602",
     "padding-left": "47px",
   },
   "46%": Object {
+    "background": "#fd0703",
     "padding-left": "47px",
   },
   "47%": Object {
+    "background": "#fd0803",
     "padding-left": "46px",
   },
+  "48%": Object {
+    "background": "#fc0803",
+  },
   "5%": Object {
+    "background": "#ce9a3c",
     "padding-left": "-21px",
   },
   "52%": Object {
+    "background": "#fc0803",
     "padding-left": "46px",
   },
   "53%": Object {
+    "background": "#fd0803",
     "padding-left": "47px",
   },
+  "54%": Object {
+    "background": "#fd0703",
+  },
+  "55%": Object {
+    "background": "#fd0703",
+  },
   "56%": Object {
+    "background": "#fd0602",
     "padding-left": "47px",
   },
   "57%": Object {
+    "background": "#fd0502",
     "padding-left": "48px",
   },
+  "58%": Object {
+    "background": "#fe0502",
+  },
+  "59%": Object {
+    "background": "#fe0402",
+  },
   "6%": Object {
+    "background": "#d38a36",
     "padding-left": "-13px",
   },
   "60%": Object {
+    "background": "#fe0301",
     "padding-left": "48px",
   },
   "61%": Object {
+    "background": "#fe0301",
     "padding-left": "49px",
   },
+  "62%": Object {
+    "background": "#fe0201",
+  },
   "63%": Object {
+    "background": "#ff0201",
     "padding-left": "49px",
   },
   "64%": Object {
+    "background": "#ff0100",
     "padding-left": "50px",
+  },
+  "65%": Object {
+    "background": "#ff0100",
+  },
+  "66%": Object {
+    "background": "#ff0000",
   },
   "69%": Object {
     "padding-left": "50px",
   },
   "7%": Object {
+    "background": "#d9792f",
     "padding-left": "-5px",
   },
   "70%": Object {
     "padding-left": "51px",
   },
   "8%": Object {
+    "background": "#de6828",
     "padding-left": "3px",
   },
   "82%": Object {
@@ -369,6 +426,7 @@ Object {
     "padding-left": "50px",
   },
   "9%": Object {
+    "background": "#e45722",
     "padding-left": "10px",
   },
 }

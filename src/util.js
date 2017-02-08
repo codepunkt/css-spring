@@ -18,7 +18,9 @@ export const getInterpolator = (stiffness, damping) => {
     const interpolated = [ value, ...Array(99), end ]
 
     return map(interpolated, () => {
-      [ value, velocity ] = interpolate(0.01, value, velocity || 0, end, stiffness, damping)
+      [ value, velocity ] = interpolate(
+        0.01, value, velocity || 0, end, stiffness, damping
+      )
       return value
     })
   }
@@ -73,4 +75,10 @@ export const toString = (keyframes) => {
     }, '')
     return `${outer}${perc}{${value}}`
   }, '')
+}
+
+// convert an interpolated rgb color value float to hex
+export const rgbFloatToHex = (float) => {
+  const limited = Math.min(255, Math.max(0, float))
+  return `0${Number(limited.toFixed(0)).toString(16)}`.substr(-2)
 }

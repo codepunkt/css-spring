@@ -5,7 +5,10 @@
 [![Code Coverage](https://img.shields.io/coveralls/codepunkt/css-spring/master.svg?style=flat&label=Code%20Coverage)](https://coveralls.io/github/codepunkt/css-spring?branch=master)
 [![MIT License](https://img.shields.io/npm/l/css-spring.svg?style=flat&label=License)](http://opensource.org/licenses/MIT)
 
-Generate physics based css-keyframe animations for the css-in-js solution of your choice or plain css.
+#### Generate physics based css keyframe animation objects or strings for the css-in-js solution of your choice.
+##### Works with simple numeric css properties (with units or without), combined properties such as padding and rgb hex colors. Eliminates duplicate values and unused keyframes to optimize animation size.
+
+#### *~3kb gzipped.*
 
 <table>
 <tr>
@@ -94,27 +97,20 @@ This method creates spring-based keyframes. Called with `startProp` and `targetP
 reflecting the starting and ending properties of the animation, it returns an object with the
 interpolated animation values.
 
-The following properties in both the `startProp` and `endProp` objects are ignored when
-calculating the animation:
-
-  - properties that do not exist in both arguments
-  - properties that have non-numeric values
-  - properties with units that differ between both arguments
-
 #### Arguments
   
   - `startProps` (_Object_): The start properties for the animation.<br>
   
     ```javascript
     // `startProps` example
-    { 'margin-left': '0px', opacity: 0 }
+    { 'margin-left': '0px', opacity: 0, background: '#f00' }
     ```
       
   - `endProps` (_Object_): The end properties for the animation.<br>
 
     ```javascript
     // `endProps` example
-    { 'margin-left': '250px', opacity: 1 }
+    { 'margin-left': '250px', opacity: 1, background: '#bada55' }
     ```
 
   - `options` (_Object_, optional): Animation options with these properties:
@@ -129,18 +125,20 @@ calculating the animation:
 
 #### Returns
 
-An object with `0%` to `100%` keys and the interpolated physics-based values for each step of the animation, e.g.:
+An object with keyframes between `0%` and `100%`, having the interpolated values for each step of the animation, e.g.:
 
 ```javascript
 {
-  "0%": { "margin-left": "0px" },
-  "1%": { "margin-left": "3px" },
-  "2%": { "margin-left": "8.544px" },
-  // 3% … 98%
-  "99%": { "margin-left": "249.981px" }
-  "100%": { "margin-left": "250px" }
+  '0%': { 'margin-left': '5px', opacity: 0.02, background: '#fe0402' },
+  '1%': { 'margin-left': '13px', opacity: 0.05, background: '#fb0b04' },
+  '2%': { 'margin-left': '25px', opacity: 0.1, background: '#f81508' },
+  // meaningful frames between 2% and 88%
+  '88%': { 'margin-left': '250px' },
+  '100%': { 'margin-left': '250px', opacity: 1, background: '#bada55' }
 }
 ```
+
+Redundant values and empty keyframes are removed to optimize the size of the resulting css. There is simply no point in having a `margin-left` value of `'250px'` in every keyframe ranging from 88% to 100%.
 
 ### `toString(keyframes, formatter)`
 
@@ -192,7 +190,7 @@ This would net you the following css:
 
 There's a lot of ideas floating in my head that could make working with **css-spring** easier. Some of these are:
 
-  - allowing the interpolation of array values like margins, paddings or translates ([#1](/../../issues/1))
-  - color interpolation ([#3](/../../issues/3))
+  - adding a plugin system to use things such as autoprefixer or cssnano minification ([#8](/../../issues/8))
+  - a commandline to generate spring keyframe animations for usage in your css files ([#4](/../../issues/4))
   
 Feel free to contribute with your own issues and ideas, your thoughts on the ones listed above, example documentation for usage with other css-in-js frameworks or pull requests for features/improvements you'd like to see.

@@ -68,10 +68,11 @@ export const omitEmptyValues = (obj) => {
 }
 
 // format keyframe styles to string
-export const toString = (keyframes) => {
+const defaultFormatter = (key, value) => `${key}:${value};`
+export const toString = (keyframes, formatter = defaultFormatter) => {
   return Object.keys(keyframes).reduce((outer, perc) => {
     const value = Object.keys(keyframes[perc]).reduce((inner, prop) => {
-      return `${inner}${prop}:${keyframes[perc][prop]};`
+      return `${inner}${formatter(prop, keyframes[perc][prop])}`
     }, '')
     return `${outer}${perc}{${value}}`
   }, '')

@@ -1,6 +1,6 @@
 {
   "name": "css-spring",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Generate physics based css-keyframe animations",
   "main": "dist/css-spring.js",
   "repository": {
@@ -19,7 +19,8 @@
   "scripts": {
     "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
     "lint": "cross-env eslint src",
-    "test": "cross-env jest --coverage"
+    "test": "cross-env jest --coverage",
+    "prepublish": "cross-env yarn run build"
   },
   "dependencies": {
     "lodash": "^4.17.4"

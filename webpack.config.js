@@ -8,6 +8,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: `dist/css-spring${minify ? '.min' : ''}.js`,
+    library: 'css-spring',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [

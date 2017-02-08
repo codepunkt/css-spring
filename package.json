@@ -1,6 +1,6 @@
 {
   "name": "css-spring",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Generate physics based css-keyframe animations",
   "main": "dist/css-spring.js",
   "repository": {

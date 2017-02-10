@@ -1,6 +1,7 @@
 import {
   combine,
   parseHexColor,
+  parseNumber,
   parseStyles,
   parseValues,
   split,
@@ -97,6 +98,26 @@ describe('parse', () => {
     })
     test('doesnt parse when not a hex color', () => {
       expect(parseHexColor('wat')).toEqual(undefined)
+    })
+  })
+
+  describe('parseNumber', () => {
+    test('returns undefined when value can not be parsed', () => {
+      expect(parseNumber('5.')).toEqual(undefined)
+      expect(parseNumber('foo')).toEqual(undefined)
+      expect(parseNumber('bar5')).toEqual(undefined)
+    })
+    test('parses unitless numbers', () => {
+      expect(parseNumber('.5')).toEqual({ unit: '', value: 0.5 })
+      expect(parseNumber('-.5')).toEqual({ unit: '', value: -0.5 })
+      expect(parseNumber('-0.6')).toEqual({ unit: '', value: -0.6 })
+      expect(parseNumber('42')).toEqual({ unit: '', value: 42 })
+    })
+    test('parses numbers with units', () => {
+      expect(parseNumber('.75em')).toEqual({ unit: 'em', value: 0.75 })
+      expect(parseNumber('-.4rem')).toEqual({ unit: 'rem', value: -0.4 })
+      expect(parseNumber('-1.9mm')).toEqual({ unit: 'mm', value: -1.9 })
+      expect(parseNumber('1337px')).toEqual({ unit: 'px', value: 1337 })
     })
   })
 })

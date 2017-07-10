@@ -68,7 +68,7 @@ export const spring = (startStyles, endStyles, options = {}) => {
         value = value === 0 || !unit ? value : `${value}${unit}`
         result[i] = addValueToProperty(result[i], prop, value)
       })
-    // if hex representations of rgb colors are found
+      // if hex representations of rgb colors are found
     } else if (!isNil(rgb)) {
       // interpolate each color component separately
       const r = interpolate(rgb[0][0], rgb[1][0])
@@ -79,8 +79,8 @@ export const spring = (startStyles, endStyles, options = {}) => {
         result[i] = addValueToProperty(result[i], prop,
           `#${toRgb(r[i])}${toRgb(g[i])}${toRgb(b[i])}`)
       })
-    // otherwise the value is fixed and can directly be appended to the
-    // resulting keyframe styles
+      // otherwise the value is fixed and can directly be appended to the
+      // resulting keyframe styles
     } else if (!isNil(fixed)) {
       for (let i = 0; i < 101; i += 1) {
         result[i] = addValueToProperty(result[i], prop, fixed)

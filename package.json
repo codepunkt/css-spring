@@ -19,9 +19,11 @@
   "scripts": {
     "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
     "test": "cross-env jest --coverage",
+    "start": "babel-node src/index.js",
     "prepublishOnly": "cross-env yarn run build"
   },
   "dependencies": {
+    "css-tree": "^1.0.0-alpha19",
     "lodash": "^4.17.4"
   },
   "devDependencies": {

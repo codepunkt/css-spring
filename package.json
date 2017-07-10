@@ -18,9 +18,8 @@
   ],
   "scripts": {
     "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
-    "lint": "cross-env eslint src",
     "test": "cross-env jest --coverage",
-    "prepublish": "cross-env yarn run build"
+    "prepublishOnly": "cross-env yarn run build"
   },
   "dependencies": {
     "lodash": "^4.17.4"

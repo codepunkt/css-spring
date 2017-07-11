@@ -1,27 +1,8 @@
-import csstree from 'css-tree'
-
-import {
-  findLast,
-  intersectionBy,
-  isNil,
-  mapValues,
-  pickBy,
-} from 'lodash'
-
-import {
-  combine,
-  parseStyles,
-} from './parse'
-
-import {
-  addValueToProperty,
-  appendToKeys,
-  calculateObsoleteValues,
-  getInterpolator,
-  omitEmptyValues,
-  rgbFloatToHex,
-  toString,
-} from './util'
+const { walk, parse } = require('css-tree')
+const { findLast, intersectionBy } = require('lodash')
+const sanitizeValues = require('./util/sanitizeValues')
+const getDeclarations = require('./util/getDeclarations')
+const getPropertyValues = require('./util/getPropertyValues')
 
 // spring presets. selected combinations of stiffness/damping.
 const presets = {
@@ -45,7 +26,7 @@ const defaultOptions = {
 // ----------
 // invoke with startStyles, endStyles and options and gain a keyframe
 // style object with interpolated values.
-export const spring = (startStyles, endStyles, options = {}) => {
+const spring = (startStyles, endStyles, options = {}) => {
   let result = {}
 
   // define stiffness, damping and precision based on default options
@@ -57,93 +38,9 @@ export const spring = (startStyles, endStyles, options = {}) => {
     presets[options.preset] || {}
   )
 
-  const getDeclarations = (ast, type = 'Declaration') =>
-    ast.children.first().block.children.toArray().filter(c => c.type === 'Declaration')
-
-  const startDeclarations = getDeclarations(csstree.parse(`#start{${startStyles}}`))
-  const endDeclarations = getDeclarations(csstree.parse(`#end{${endStyles}}`))
-
-  // get properties that exist in both start and end declarations
-  const applicableProperties = intersectionBy(
-    startDeclarations.map(d => d.property),
-    endDeclarations.map(d => d.property)
+  const interpolate = sanitizeValues(
+    getPropertyValues(getDeclarations(startStyles), getDeclarations(endStyles))
   )
-
-  // get the last declaration from both start and end declarations for the applicable properties
-  const applicableDeclarations = applicableProperties.reduce((accu, prop) => {
-    accu[prop] = {
-      start: findLast(startDeclarations, (d => d.property === prop)),
-      end: findLast(endDeclarations, (d => d.property === prop)),
-    }
-    return accu;
-  }, {})
-
-  const interpolate = {}
-
-  const getApplicableValues = (startValues, endValues) => {
-    const applicableValues = []
-
-    if (startValues.length === endValues.length) {
-      for (let i = 0; i < startValues.length; i++) {
-        const startValue = startValues[i]
-        const endValue = endValues[i]
-        if (startValue.type === endValue.type) {
-          switch (startValue.type) {
-            case 'WhiteSpace':
-              applicableValues.push({ type: startValue.type })
-              break
-            case 'Operator':
-              applicableValues.push({ type: startValue.type, value: startValue.value })
-              break
-            case 'Identifier':
-              if (startValue.name === endValue.name) {
-                applicableValues.push({ type: startValue.type, name: startValue.name })
-              }
-              break
-            case 'Dimension':
-              if (startValue.unit === endValue.unit) {
-                applicableValues.push({ type: startValue.type, unit: startValue.unit, start: startValue.value, end: endValue.value })
-              }
-              break
-            case 'Number':
-            case 'HexColor':
-              applicableValues.push({ type: startValue.type, start: startValue.value, end: endValue.value })
-              break
-            case 'Function':
-              const fStartValues = startValue.children.toArray();
-              const fEndValues = endValue.children.toArray();
-              const aplv = getApplicableValues(fStartValues, fEndValues)
-              if (aplv.length === fStartValues.length) {
-                applicableValues.push({ type: startValue.type, name: startValue.name, values: aplv })
-              }
-              break
-            default:
-              // Identifier
-              console.log(`unknown type: ${startValue.type}`)
-          }
-        }
-      }
-    }
-
-    return applicableValues;
-  }
-
-  // check if corresponding, interpolateable values exist
-  Object.keys(applicableDeclarations).forEach(prop => {
-    console.log(`${prop} start`)
-    const startValues = applicableDeclarations[prop].start.value.children.toArray()
-    startValues.forEach(val => console.dir(val))
-    console.log(`${prop} end`)
-    const endValues = applicableDeclarations[prop].end.value.children.toArray()
-    endValues.forEach(val => console.dir(val))
-
-    const applicableValues = getApplicableValues(startValues, endValues)
-    if (applicableValues.length === startValues.length) {
-      interpolate[prop] = applicableValues
-    }
-  })
-
-  console.log(`\n\n\n==========\n`)
   console.dir(interpolate, { depth: null })
 
   // const walkValue = (value) =>
@@ -169,9 +66,6 @@ export const spring = (startStyles, endStyles, options = {}) => {
   //   console.log(`\n${dec.property}\n---`)
   //   walkValue(dec.value)
   // })
-
-
-
 
   // // get an interpolation function and parse start- and end styles
   // const interpolate = getInterpolator(stiffness, damping)
@@ -225,7 +119,8 @@ export const spring = (startStyles, endStyles, options = {}) => {
   return result
 }
 
-spring(`
+spring(
+  `
   left: 10px;
   right: 2em;
   padding: 0em 0em 10px 10rem;
@@ -234,7 +129,13 @@ spring(`
   transform: translate(10px 3em) rotate(25deg) scale(.5);
   background: rgba(0, 255, 0, .5);
   border: 1px solid #f00;
-`, `
+  @media print {
+    .wat {
+      margin: 0 auto;
+    }
+  }
+`,
+  `
   left: 20px;
   right: 1em;
   padding: 10em 10em 0px 20rem;
@@ -242,7 +143,8 @@ spring(`
   transform: translate(5px 2em) rotate(15deg) scale(1);
   background: rgba(255, 0, 0, .1);
   border: 3px solid #0f0;
-`)
+`
+)
 
 // console.time('interpolate 2')
 // spring(
@@ -252,5 +154,5 @@ spring(`
 // )
 // console.timeEnd('interpolate 2')
 
-export { toString }
-export default spring
+// export { toString }
+// export default spring

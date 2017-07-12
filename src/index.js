@@ -1,8 +1,9 @@
 const { walk, parse } = require('css-tree')
-const { findLast, intersectionBy } = require('lodash')
+const { findLast, intersectionBy, map } = require('lodash')
 const sanitizeValues = require('./util/sanitizeValues')
 const getDeclarations = require('./util/getDeclarations')
 const getPropertyValues = require('./util/getPropertyValues')
+const getInterpolator = require('./util/getInterpolator')
 
 // spring presets. selected combinations of stiffness/damping.
 const presets = {
@@ -38,10 +39,67 @@ const spring = (startStyles, endStyles, options = {}) => {
     presets[options.preset] || {}
   )
 
-  const interpolate = sanitizeValues(
+  const values = sanitizeValues(
     getPropertyValues(getDeclarations(startStyles), getDeclarations(endStyles))
   )
-  console.dir(interpolate, { depth: null })
+  // console.dir(values, { depth: null })
+
+  const arghl1 = valueParts =>
+    valueParts.map(part => {
+      switch (part.type) {
+        case 'Function':
+          return Object.assign(part, { values: arghl1(part.values) })
+        case 'Dimension':
+        case 'Number':
+          return Object.assign(part, {
+            values: interpolate(part.start, part.end),
+          })
+        default:
+          return part
+      }
+    })
+
+  const arghl2 = valueParts =>
+    valueParts.reduce(
+      (accu, part) => {
+        return accu.map((e = '', i) => {
+          switch (part.type) {
+            case 'Function':
+              console.log(part.values)
+              return `${e}${arghl2(part.values)}`
+            case 'Dimension':
+              return `${e}${part.values[i]}${part.unit}`
+            case 'Number':
+              return `${e}${part.values[i]}`
+          }
+          return `${e}${part.value}`
+        })
+      },
+      [...Array(interpolate.steps + 1)]
+    )
+
+  const interpolate = getInterpolator(0.5, 0.5)
+  const styl = [...Array(interpolate.steps + 1)].reduce(
+    (accu, e, i) => Object.assign(accu, { [i * 100 / interpolate.steps]: {} }),
+    {}
+  )
+  for (let [property, valueParts] of Object.entries(values)) {
+    values[property] = arghl1(valueParts)
+    arghl2(values[property])
+  }
+
+  // const percentageStep = 100 / interpolate.steps
+  // const data = [...Array(interpolate.steps + 1)].reduce((accu, e, i) => {
+  //   const styles = {}
+  //   for (let [property, valueParts] of Object.entries(values)) {
+  //     console.log(property, valueParts)
+  //   }
+  //   accu[i * percentageStep] = styles
+  //   return accu
+  // }, {})
+  // console.dir(data, { depth: null })
+
+  // interpolate(0, 10).forEach(v => console.log(v))
 
   // const walkValue = (value) =>
   //   value.children.toArray()
@@ -120,29 +178,22 @@ const spring = (startStyles, endStyles, options = {}) => {
 }
 
 spring(
+  // left: 10px;
+  // right: 2em;
+  // padding: 0em 0em 10px 10rem;
+  // border: 1px solid #f00;
+  // opacity: 0;
+  // opacity: .5;
   `
-  left: 10px;
-  right: 2em;
-  padding: 0em 0em 10px 10rem;
-  opacity: 0;
-  opacity: .5;
-  transform: translate(10px 3em) rotate(25deg) scale(.5);
-  background: rgba(0, 255, 0, .5);
-  border: 1px solid #f00;
-  @media print {
-    .wat {
-      margin: 0 auto;
-    }
-  }
+  transform: translate(10px 3em) rotate(25deg) scale(.5)
 `,
+  // left: 20px;
+  // right: 1em;
+  // padding: 10em 10em 0px 20rem;
+  // border: 3px solid #f00;
+  // opacity: 1;
   `
-  left: 20px;
-  right: 1em;
-  padding: 10em 10em 0px 20rem;
-  opacity: 1;
-  transform: translate(5px 2em) rotate(15deg) scale(1);
-  background: rgba(255, 0, 0, .1);
-  border: 3px solid #0f0;
+  transform: translate(5px 2em) rotate(15deg) scale(1)
 `
 )
 

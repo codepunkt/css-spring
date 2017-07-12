@@ -6,8 +6,8 @@ const removeNull = arr => filter(arr, e => e !== null)
 // Returns an array containing the interpolateable parts of a CSS property
 // value based on the given arrays of AST value nodes for both start
 // and end values.
-const getAnimatableValues = (startValues, endValues) => {
-  return removeNull(
+const getAnimatableValues = (startValues, endValues) =>
+  removeNull(
     map(startValues, (startValue, i) => {
       const endValue = endValues[i]
       const { type, unit, name, value, value: start, children } = startValue
@@ -19,14 +19,19 @@ const getAnimatableValues = (startValues, endValues) => {
 
       switch (type) {
         case 'WhiteSpace':
-          return { type }
+          return { type: 'Fixed', value: ' ' }
         case 'Operator':
-          return { type, value }
+          return { type: 'Fixed', value }
         case 'Identifier':
-          return name !== endValue.name ? null : { type, name }
+          return name !== endValue.name ? null : { type: 'Fixed', value: name }
         case 'Dimension':
-          return unit !== endValue.unit ? null : { type, unit, start, end }
+          return unit !== endValue.unit
+            ? null
+            : { type, unit, start: +start, end: +end }
         case 'Number':
+          return start === end
+            ? { type: 'Fixed', value: start }
+            : { type, start: +start, end: +end }
         case 'HexColor':
           return { type, start, end }
         case 'Function':
@@ -43,7 +48,6 @@ const getAnimatableValues = (startValues, endValues) => {
       }
     })
   )
-}
 
 // Returns an object keyed by the CSS properties that have corresponding,
 // interpolateable values.

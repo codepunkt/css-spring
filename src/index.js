@@ -1,9 +1,12 @@
 const { walk, parse } = require('css-tree')
 const { findLast, intersectionBy, map } = require('lodash')
 const sanitizeValues = require('./util/sanitizeValues')
-const getDeclarations = require('./util/getDeclarations')
-const getPropertyValues = require('./util/getPropertyValues')
+const parseDeclarations = require('./util/parseDeclarations')
+const getAnimationValues = require('./util/getAnimationValues')
 const getInterpolator = require('./util/getInterpolator')
+const addInterpolatedValues = require('./util/addInterpolatedValues')
+
+const log = obj => console.dir(obj, { colors: true, depth: null })
 
 // spring presets. selected combinations of stiffness/damping.
 const presets = {
@@ -39,55 +42,71 @@ const spring = (startStyles, endStyles, options = {}) => {
     presets[options.preset] || {}
   )
 
+  // parse style declarations of both start and end styles and sanitize
+  // them to remove all value combinations that are not interpolatable
   const values = sanitizeValues(
-    getPropertyValues(getDeclarations(startStyles), getDeclarations(endStyles))
-  )
-  // console.dir(values, { depth: null })
-
-  const arghl1 = valueParts =>
-    valueParts.map(part => {
-      switch (part.type) {
-        case 'Function':
-          return Object.assign(part, { values: arghl1(part.values) })
-        case 'Dimension':
-        case 'Number':
-          return Object.assign(part, {
-            values: interpolate(part.start, part.end),
-          })
-        default:
-          return part
-      }
-    })
-
-  const arghl2 = valueParts =>
-    valueParts.reduce(
-      (accu, part) => {
-        return accu.map((e = '', i) => {
-          switch (part.type) {
-            case 'Function':
-              console.log(part.values)
-              return `${e}${arghl2(part.values)}`
-            case 'Dimension':
-              return `${e}${part.values[i]}${part.unit}`
-            case 'Number':
-              return `${e}${part.values[i]}`
-          }
-          return `${e}${part.value}`
-        })
-      },
-      [...Array(interpolate.steps + 1)]
+    getAnimationValues(
+      parseDeclarations(startStyles),
+      parseDeclarations(endStyles)
     )
-
-  const interpolate = getInterpolator(0.5, 0.5)
-  const styl = [...Array(interpolate.steps + 1)].reduce(
-    (accu, e, i) => Object.assign(accu, { [i * 100 / interpolate.steps]: {} }),
-    {}
   )
-  for (let [property, valueParts] of Object.entries(values)) {
-    values[property] = arghl1(valueParts)
-    arghl2(values[property])
+
+  // quit if there are no values interpolatable styles
+  if (Object.keys(values).length === 0 && values.constructor === Object) {
+    return
   }
 
+  const addOrApppend = (obj, key, value) =>
+    Object.assign(obj, {
+      [key]: `${obj[key] || ''}${value}`,
+    })
+
+  const getFunctionValue = (values, step) =>
+    values.map(part => (part.values ? part.values[step] : '')).join('')
+
+  const arghl3 = (obj, perc) => {
+    let result = [...Array(interpolator.steps + 1)]
+
+    for (let [key, value] of Object.entries(obj)) {
+      result = value.reduce((accu, part) => {
+        return accu.map((o = {}, i) => {
+          switch (part.type) {
+            case 'Dimension':
+            case 'Fixed':
+            case 'HexColor':
+            case 'Number':
+              return addOrApppend(o, key, part.values[i])
+            case 'Function':
+              return addOrApppend(
+                o,
+                key,
+                `${part.name}(${getFunctionValue(part.values, i)})`
+              )
+          }
+          return o
+        })
+      }, result)
+    }
+
+    return result
+  }
+
+  const tension = 0.5
+  const wobble = 0.5
+  const keyFramePrecision = 2
+  const interpolationSteps = 13
+
+  const interpolator = getInterpolator(tension, wobble, interpolationSteps)
+
+  const keyframePercentages = [...Array(interpolator.steps + 1)].map(
+    (_, i) => `${(i * 100 / interpolator.steps).toFixed(keyFramePrecision)}%`
+  )
+  log(keyframePercentages)
+
+  const withInterpolatedValues = addInterpolatedValues(interpolator, values)
+
+  const blubb = arghl3(withInterpolatedValues, keyframePercentages)
+  log(blubb)
   // const percentageStep = 100 / interpolate.steps
   // const data = [...Array(interpolate.steps + 1)].reduce((accu, e, i) => {
   //   const styles = {}
@@ -178,22 +197,19 @@ const spring = (startStyles, endStyles, options = {}) => {
 }
 
 spring(
-  // left: 10px;
-  // right: 2em;
-  // padding: 0em 0em 10px 10rem;
-  // border: 1px solid #f00;
-  // opacity: 0;
-  // opacity: .5;
   `
-  transform: translate(10px 3em) rotate(25deg) scale(.5)
+  left: 10px;
+  opacity: .5;
+  padding: 50rem 0em 10px 10rem;
+  transform: translate(10px 3em) rotate(25deg) scale(.5);
+  border: 1px solid #00f;
 `,
-  // left: 20px;
-  // right: 1em;
-  // padding: 10em 10em 0px 20rem;
-  // border: 3px solid #f00;
-  // opacity: 1;
   `
-  transform: translate(5px 2em) rotate(15deg) scale(1)
+  left: 200px;
+  opacity: 1;
+  padding: -200rem 10em 0px 20rem;
+  transform: translate(5px 2em) rotate(15deg) scale(1);
+  border: 3px solid #ff0000;
 `
 )
 

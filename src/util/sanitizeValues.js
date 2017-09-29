@@ -1,7 +1,7 @@
 const { filter, map } = require('lodash')
 
 // Returns an array without null values
-const removeNull = arr => filter(arr, e => e !== null)
+const removeNull = arr => filter(arr, e => e != null)
 
 // Returns an array containing the interpolateable parts of a CSS property
 // value based on the given arrays of AST value nodes for both start

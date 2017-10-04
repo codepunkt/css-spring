@@ -13,9 +13,10 @@ const addInterpolatedValues = (interpolator, parts, precision) =>
       case 'Dimension':
         return assignValues(
           part,
-          interpolator
-            .number(part.start, part.end)
-            .map(v => `${toPrecision(v, precision, part.unit)}${part.unit}`)
+          interpolator.number(part.start, part.end).map(v => {
+            const rounded = toPrecision(v, precision, part.unit)
+            return rounded === '0' ? '0' : `${rounded}${part.unit}`
+          })
         )
       case 'Number':
         return assignValues(

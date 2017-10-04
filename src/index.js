@@ -72,7 +72,8 @@ const spring = (startStyles, endStyles, options = {}) => {
   // calculate interpolated values and add them to the declarations
   const declarationsWithInterpolatedValues = addInterpolatedValues(
     interpolator,
-    declarations
+    declarations,
+    precision
   )
 
   return buildKeyframeObject(

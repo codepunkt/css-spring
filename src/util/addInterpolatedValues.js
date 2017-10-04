@@ -1,3 +1,5 @@
+const toPrecision = require('./toPrecision')
+
 const assignValues = (obj, values) => Object.assign(obj, { values })
 
 const addInterpolatedValues = (interpolator, parts, precision) =>
@@ -13,14 +15,14 @@ const addInterpolatedValues = (interpolator, parts, precision) =>
           part,
           interpolator
             .number(part.start, part.end)
-            .map(v => `${v.toFixed(precision)}${part.unit}`)
+            .map(v => `${toPrecision(v, precision)}${part.unit}`)
         )
       case 'Number':
         return assignValues(
           part,
           interpolator
             .number(part.start, part.end)
-            .map(v => v.toFixed(precision))
+            .map(v => toPrecision(v, precision))
         )
       case 'HexColor':
         return assignValues(part, interpolator.hex(part.start, part.end))

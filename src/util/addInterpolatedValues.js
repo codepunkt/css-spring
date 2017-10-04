@@ -15,7 +15,7 @@ const addInterpolatedValues = (interpolator, parts, precision) =>
           part,
           interpolator
             .number(part.start, part.end)
-            .map(v => `${toPrecision(v, precision)}${part.unit}`)
+            .map(v => `${toPrecision(v, precision, part.unit)}${part.unit}`)
         )
       case 'Number':
         return assignValues(

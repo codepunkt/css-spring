@@ -9,13 +9,7 @@
   },
   "author": "Christoph Werner <christoph@codepunkt.de>",
   "license": "MIT",
-  "keywords": [
-    "react",
-    "css",
-    "animation",
-    "physics",
-    "spring"
-  ],
+  "keywords": ["react", "css", "animation", "physics", "spring"],
   "scripts": {
     "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
     "test": "cross-env jest --coverage",
@@ -42,8 +36,6 @@
     "webpack": "^3.1.0"
   },
   "jest": {
-    "testPathDirs": [
-      "src"
-    ]
+    "testPathDirs": ["src"]
   }
 }

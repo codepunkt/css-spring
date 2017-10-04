@@ -1,6 +1,7 @@
 const { walk, parse } = require('css-tree')
 const { findLast, intersectionBy, map } = require('lodash')
 
+const toPrecision = require('./util/toPrecision')
 const sanitizeValues = require('./util/sanitizeValues')
 const getInterpolator = require('./util/getInterpolator')
 const parseDeclarations = require('./util/parseDeclarations')
@@ -66,7 +67,7 @@ const spring = (startStyles, endStyles, options = {}) => {
 
   // calculate keyframe percentages
   const keyframePercentages = [...Array(interpolator.steps + 1)].map(
-    (_, i) => `${(i * 100 / interpolator.steps).toFixed(keyframePrecision)}%`
+    (_, i) => `${toPrecision(i * 100 / interpolator.steps, keyframePrecision)}%`
   )
 
   // calculate interpolated values and add them to the declarations

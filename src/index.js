@@ -20,12 +20,11 @@ const presets = {
 
 // default spring options.
 // damping and precision reflect the values of the `wobbly` preset,
-// precision defaults to 2 which should be a good tradeoff between
-// animation detail and resulting filesize.
 const defaultOptions = {
-  stiffness: 180,
   damping: 12,
+  keyframePrecision: 2,
   precision: 2,
+  stiffness: 180,
 }
 
 // css-spring
@@ -35,7 +34,7 @@ const defaultOptions = {
 const spring = (startStyles, endStyles, options = {}) => {
   // define stiffness, damping and precision based on default options
   // and options given in arguments.
-  const { stiffness, damping, precision } = Object.assign(
+  const { damping, keyframePrecision, precision, stiffness } = Object.assign(
     {},
     defaultOptions,
     options,
@@ -67,7 +66,7 @@ const spring = (startStyles, endStyles, options = {}) => {
 
   // calculate keyframe percentages
   const keyframePercentages = [...Array(interpolator.steps + 1)].map(
-    (_, i) => `${(i * 100 / interpolator.steps).toFixed(precision)}%`
+    (_, i) => `${(i * 100 / interpolator.steps).toFixed(keyframePrecision)}%`
   )
 
   // calculate interpolated values and add them to the declarations

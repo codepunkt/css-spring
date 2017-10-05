@@ -2,7 +2,7 @@ const { findLast, intersectionBy, map, reduce } = require('lodash')
 
 // Returns an array of AST nodes that form the value for the last occurence
 // of the given property name in the list of given AST declaration nodes.
-const getLastPropertyValue = (declarations, prop) =>
+export const getLastPropertyValue = (declarations, prop) =>
   findLast(declarations, d => d.property === prop).value.children.toArray()
 
 // Returns an object that is keyed by the CSS properties that exist in both
@@ -21,4 +21,4 @@ const getAnimationValues = (startDec, endDec) =>
     {}
   )
 
-module.exports = getAnimationValues
+export default getAnimationValues

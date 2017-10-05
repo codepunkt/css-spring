@@ -1,9 +1,9 @@
-const addOrApppend = (obj, key, value) =>
+export const addOrApppend = (obj, key, value) =>
   Object.assign(obj, {
     [key]: `${obj[key] || ''}${value}`,
   })
 
-const getFunctionValue = (values, step) =>
+export const getFunctionValue = (values, step) =>
   values.map(part => (part.values ? part.values[step] : '')).join('')
 
 const buildKeyframeObject = (obj, keyframePercentages) => {
@@ -34,4 +34,4 @@ const buildKeyframeObject = (obj, keyframePercentages) => {
   return result
 }
 
-module.exports = buildKeyframeObject
+export default buildKeyframeObject

@@ -1,14 +1,14 @@
-const toPrecision = require('./toPrecision')
+import toPrecision from './toPrecision'
 
-const assignValues = (obj, values) => Object.assign(obj, { values })
+export const assignValues = (obj, values) => Object.assign(obj, { values })
 
-const addInterpolatedValues = (interpolator, parts, precision) =>
+export const addInterpolatedValue = (interpolator, parts, precision) =>
   parts.map(part => {
     switch (part.type) {
       case 'Function':
         return assignValues(
           part,
-          addInterpolatedValues(interpolator, part.values, precision)
+          addInterpolatedValue(interpolator, part.values, precision)
         )
       case 'Dimension':
         return assignValues(
@@ -30,14 +30,16 @@ const addInterpolatedValues = (interpolator, parts, precision) =>
       case 'Fixed':
         return assignValues(part, interpolator.fixed(part.value))
       default:
-        return part
+        throw new Error(`unknown value type: ${part.type}`)
     }
   })
 
-module.exports = (interpolator, values, precision) => {
+const addInterpolatedValues = (interpolator, values, precision) => {
   for (let [key, value] of Object.entries(values)) {
-    values[key] = addInterpolatedValues(interpolator, value, precision)
+    values[key] = addInterpolatedValue(interpolator, value, precision)
   }
 
   return values
 }
+
+export default addInterpolatedValues

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buildKeyfameObject wat 1`] = `
+Object {
+  "0%": Object {
+    "border": "0 solid #00f",
+    "transform": "scale(1)",
+  },
+  "100%": Object {
+    "border": "250 solid #ff0",
+    "transform": "scale(2.25)",
+  },
+}
+`;

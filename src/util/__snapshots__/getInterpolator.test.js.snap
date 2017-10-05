@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getInterpolator interpolate methods 1`] = `
+Array [
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+  "solid",
+]
+`;
+
+exports[`getInterpolator interpolate methods 2`] = `
+Array [
+  0.00044800000000000005,
+  0.4946185896328831,
+  0.9051616395486499,
+  1.0198176333091526,
+  1.0189715828057737,
+  1.0056257655300351,
+  1.0001037395457009,
+  0.9994026209821363,
+  0.9997427937867982,
+  0.9999618240774797,
+  1,
+]
+`;
+
+exports[`getInterpolator interpolate methods 3`] = `
+Array [
+  "#000e00",
+  "#000707",
+  "#00010d",
+  "#00000f",
+  "#00000f",
+  "#00000f",
+  "#00000f",
+  "#00000e",
+  "#00000e",
+  "#00000e",
+  "#00000f",
+]
+`;

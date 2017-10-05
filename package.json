@@ -12,9 +12,9 @@
   "keywords": ["react", "css", "animation", "physics", "spring"],
   "scripts": {
     "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
-    "test": "cross-env jest --coverage",
+    "test": "jest --coverage --watch",
     "start": "babel-node src/index.js",
-    "prepublishOnly": "cross-env yarn run build"
+    "prepublishOnly": "cross-env npm run build"
   },
   "dependencies": {
     "css-tree": "^1.0.0-alpha19",

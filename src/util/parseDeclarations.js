@@ -7,11 +7,8 @@ const parseDeclarations = styles => {
 
   walk(parse(`#random${randomNumber}{${styles}}`), function(node) {
     if (node.type === 'Declaration') {
-      const selector = this.rule.selector.children.first().children.first()
-      if (
-        selector.type === 'IdSelector' &&
-        selector.name === `random${randomNumber}`
-      ) {
+      const s = this.rule.selector.children.first().children.first()
+      if (s.type === 'IdSelector' && s.name === `random${randomNumber}`) {
         result.push(node)
       }
     }
@@ -20,4 +17,4 @@ const parseDeclarations = styles => {
   return result
 }
 
-module.exports = parseDeclarations
+export default parseDeclarations

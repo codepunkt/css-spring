@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addInterpolatedValue adds interpolated values 1`] = `
+Object {
+  "border": Array [
+    Object {
+      "end": 250,
+      "start": 0,
+      "type": "Dimension",
+      "unit": "px",
+      "values": Array [
+        "0",
+        "250px",
+      ],
+    },
+    Object {
+      "type": "Fixed",
+      "value": " solid ",
+      "values": Array [
+        " solid ",
+        " solid ",
+      ],
+    },
+    Object {
+      "end": "#0f0",
+      "start": "#f00",
+      "type": "HexColor",
+      "values": Array [
+        "#f00",
+        "#0f0",
+      ],
+    },
+  ],
+  "transform": Array [
+    Object {
+      "name": "scale",
+      "type": "Function",
+      "values": Array [
+        Object {
+          "end": 2,
+          "start": 1,
+          "type": "Number",
+          "values": Array [
+            "1",
+            "2",
+          ],
+        },
+      ],
+    },
+  ],
+}
+`;

@@ -12,7 +12,7 @@
   "keywords": ["react", "css", "animation", "physics", "spring"],
   "scripts": {
     "build": "cross-env MINIFY_BUILD=1 webpack && cross-env webpack",
-    "test": "jest --coverage --watch",
+    "test": "jest --coverage",
     "start": "babel-node src/index.js",
     "prepublishOnly": "cross-env npm run build"
   },

@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`css-spring matches snapshots 1`] = `
+Object {
+  "0%": Object {
+    "border": "1px solid #0000fe",
+    "left": "calc(10px + 10rem)",
+    "opacity": "0.5",
+    "padding": "49.89rem 0 10px 10rem",
+    "transform": "translate(10px 3em) rotate(25deg) scale(0.5)",
+  },
+  "100%": Object {
+    "border": "3px solid #ff0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "15.38%": Object {
+    "border": "3px solid #c2003c",
+    "left": "calc(155px + 2.37rem)",
+    "opacity": "0.88",
+    "padding": "-140.86rem 7.63em 2px 17.63rem",
+    "transform": "translate(6px 2.24em) rotate(17.37deg) scale(0.88)",
+  },
+  "23.08%": Object {
+    "border": "3px solid #f60008",
+    "left": "calc(193px + 0.35rem)",
+    "opacity": "0.98",
+    "padding": "-191.23rem 9.65em 0 19.65rem",
+    "transform": "translate(5px 2.04em) rotate(15.35deg) scale(0.98)",
+  },
+  "30.77%": Object {
+    "border": "3px solid #03fffa",
+    "left": "calc(204px + -0.22rem)",
+    "opacity": "1.01",
+    "padding": "-205.43rem 10.22em 0 20.22rem",
+    "transform": "translate(5px 1.98em) rotate(14.78deg) scale(1.01)",
+  },
+  "38.46%": Object {
+    "border": "3px solid #03fffa",
+    "left": "calc(204px + -0.21rem)",
+    "opacity": "1.01",
+    "padding": "-205.28rem 10.21em 0 20.21rem",
+    "transform": "translate(5px 1.98em) rotate(14.79deg) scale(1.01)",
+  },
+  "46.15%": Object {
+    "border": "3px solid #00fffd",
+    "left": "calc(202px + -0.1rem)",
+    "opacity": "1",
+    "padding": "-202.48rem 10.1em 0 20.1rem",
+    "transform": "translate(5px 1.99em) rotate(14.9deg) scale(1)",
+  },
+  "53.85%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + -0.03rem)",
+    "opacity": "1",
+    "padding": "-200.64rem 10.03em 0 20.03rem",
+    "transform": "translate(5px 2em) rotate(14.97deg) scale(1)",
+  },
+  "61.54%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.95rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "69.23%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.85rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "7.69%": Object {
+    "border": "2px solid #5b00a3",
+    "left": "calc(78px + 6.42rem)",
+    "opacity": "0.68",
+    "padding": "-39.54rem 3.58em 6px 13.58rem",
+    "transform": "translate(8px 2.64em) rotate(21.42deg) scale(0.68)",
+  },
+  "76.92%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.91rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "84.62%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.97rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "92.31%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+}
+`;
+
+exports[`css-spring matches snapshots 2`] = `
+Object {
+  "0%": Object {
+    "border": "1px solid #0000fe",
+  },
+  "100%": Object {
+    "border": "25px solid #bada55",
+  },
+  "15.385%": Object {
+    "border": "19px solid #8da67d",
+  },
+  "23.077%": Object {
+    "border": "24px solid #b3d25a",
+  },
+  "30.769%": Object {
+    "border": "26px solid #bede51",
+  },
+  "38.462%": Object {
+    "border": "26px solid #bdde51",
+  },
+  "46.154%": Object {
+    "border": "25px solid #bbdc53",
+  },
+  "53.846%": Object {
+    "border": "25px solid #bada54",
+  },
+  "61.538%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "69.231%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "7.692%": Object {
+    "border": "10px solid #424ec2",
+  },
+  "76.923%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "84.615%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "92.308%": Object {
+    "border": "25px solid #b9d955",
+  },
+}
+`;
+
+exports[`css-spring matches snapshots 3`] = `undefined`;

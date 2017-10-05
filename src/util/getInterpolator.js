@@ -1,11 +1,11 @@
 const springer = require('springer').default
 
-const toSixDigits = hex =>
+export const toSixDigits = hex =>
   hex.length === 3
     ? `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`
     : hex
 
-const interpolateColor = (a, b, amount) => {
+export const interpolateColor = (a, b, amount) => {
   a = toSixDigits(a)
   b = toSixDigits(b)
 
@@ -43,4 +43,4 @@ const getInterpolator = (tension, wobble, steps = 100) => {
   }
 }
 
-module.exports = getInterpolator
+export default getInterpolator

@@ -1,49 +1,53 @@
-const { filter, map } = require('lodash')
-
-// Returns an array without null values
-const removeNull = arr => filter(arr, e => e != null)
+const { compact, filter, map } = require('lodash')
 
 // Returns an array containing the interpolateable parts of a CSS property
 // value based on the given arrays of AST value nodes for both start
 // and end values.
-const getAnimatableValues = (startValues, endValues) =>
-  removeNull(
-    map(startValues, (startValue, i) => {
-      const endValue = endValues[i]
-      const { type, unit, name, value, value: start, children } = startValue
-      const { value: end } = endValue
+export const getAnimatableValues = (startValues, endValues) =>
+  compact(
+    map(startValues, (start, i) => {
+      const end = endValues[i]
 
-      if (type !== endValue.type) {
+      if (start.type !== end.type) {
         return
       }
 
-      switch (type) {
+      switch (start.type) {
         case 'WhiteSpace':
           return { type: 'Fixed', value: ' ' }
         case 'Operator':
-          return { type: 'Fixed', value }
-        case 'Identifier':
-          return name !== endValue.name ? null : { type: 'Fixed', value: name }
-        case 'Dimension':
-          return unit !== endValue.unit
+          return start.value !== end.value
             ? null
-            : { type, unit, start: +start, end: +end }
+            : { type: 'Fixed', value: start.value }
+        case 'Identifier':
+          return start.name !== end.name
+            ? null
+            : { type: 'Fixed', value: start.name }
+        case 'Dimension':
+          return start.unit !== end.unit
+            ? null
+            : {
+                type: start.type,
+                unit: start.unit,
+                start: +start.value,
+                end: +end.value,
+              }
         case 'Number':
-          return start === end
-            ? { type: 'Fixed', value: start }
-            : { type, start: +start, end: +end }
+          return start.value !== end.value
+            ? { type: start.type, start: +start.value, end: +end.value }
+            : { type: 'Fixed', value: start.value }
         case 'HexColor':
-          return { type, start, end }
+          return { type: start.type, start: start.value, end: end.value }
         case 'Function':
           const values = getAnimatableValues(
-            children.toArray(),
-            endValue.children.toArray()
+            start.children.toArray(),
+            end.children.toArray()
           )
-          return values.length !== children.toArray().length
+          return values.length !== start.children.toArray().length
             ? null
-            : { type, name, values }
+            : { type: start.type, name: start.name, values }
         default:
-          console.error(`unknown type: ${type}`)
+          console.error(`unknown type: ${start.type}`)
           return null
       }
     })
@@ -65,4 +69,4 @@ const sanitizeValues = values => {
   return result
 }
 
-module.exports = sanitizeValues
+export default sanitizeValues

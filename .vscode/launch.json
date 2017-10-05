@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start CSS-Spring",
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/src/index.js"
+    }
+  ]
+}

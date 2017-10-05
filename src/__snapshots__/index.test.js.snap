@@ -9,6 +9,20 @@ Object {
     "padding": "49.89rem 0 10px 10rem",
     "transform": "translate(10px 3em) rotate(25deg) scale(0.5)",
   },
+  "1%": Object {
+    "border": "1px solid #0300fb",
+    "left": "calc(13px + 9.85rem)",
+    "opacity": "0.51",
+    "padding": "46.26rem 0.15em 10px 10.15rem",
+    "transform": "translate(10px 2.99em) rotate(24.85deg) scale(0.51)",
+  },
+  "10%": Object {
+    "border": "2px solid #7e0080",
+    "left": "calc(104px + 5.05rem)",
+    "opacity": "0.75",
+    "padding": "-73.65rem 4.95em 5px 14.95rem",
+    "transform": "translate(8px 2.51em) rotate(20.05deg) scale(0.75)",
+  },
   "100%": Object {
     "border": "3px solid #ff0000",
     "left": "calc(200px + 0)",
@@ -16,85 +30,680 @@ Object {
     "padding": "-200rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
-  "15.38%": Object {
-    "border": "3px solid #c2003c",
-    "left": "calc(155px + 2.37rem)",
-    "opacity": "0.88",
-    "padding": "-140.86rem 7.63em 2px 17.63rem",
-    "transform": "translate(6px 2.24em) rotate(17.37deg) scale(0.88)",
+  "11%": Object {
+    "border": "2px solid #8d0071",
+    "left": "calc(115px + 4.45rem)",
+    "opacity": "0.78",
+    "padding": "-88.65rem 5.55em 4px 15.55rem",
+    "transform": "translate(7px 2.45em) rotate(19.45deg) scale(0.78)",
   },
-  "23.08%": Object {
-    "border": "3px solid #f60008",
-    "left": "calc(193px + 0.35rem)",
+  "12%": Object {
+    "border": "2px solid #990065",
+    "left": "calc(125px + 3.97rem)",
+    "opacity": "0.8",
+    "padding": "-100.84rem 6.03em 4px 16.03rem",
+    "transform": "translate(7px 2.4em) rotate(18.97deg) scale(0.8)",
+  },
+  "13%": Object {
+    "border": "2px solid #a70057",
+    "left": "calc(135px + 3.43rem)",
+    "opacity": "0.83",
+    "padding": "-114.19rem 6.57em 3px 16.57rem",
+    "transform": "translate(7px 2.34em) rotate(18.43deg) scale(0.83)",
+  },
+  "14%": Object {
+    "border": "2px solid #b2004c",
+    "left": "calc(143px + 3.01rem)",
+    "opacity": "0.85",
+    "padding": "-124.83rem 6.99em 3px 16.99rem",
+    "transform": "translate(7px 2.3em) rotate(18.01deg) scale(0.85)",
+  },
+  "15%": Object {
+    "border": "2px solid #be0040",
+    "left": "calc(152px + 2.55rem)",
+    "opacity": "0.87",
+    "padding": "-136.28rem 7.45em 3px 17.45rem",
+    "transform": "translate(6px 2.25em) rotate(17.55deg) scale(0.87)",
+  },
+  "16%": Object {
+    "border": "3px solid #c80036",
+    "left": "calc(159px + 2.13rem)",
+    "opacity": "0.89",
+    "padding": "-146.66rem 7.87em 2px 17.87rem",
+    "transform": "translate(6px 2.21em) rotate(17.13deg) scale(0.89)",
+  },
+  "17%": Object {
+    "border": "3px solid #d0002e",
+    "left": "calc(166px + 1.81rem)",
+    "opacity": "0.91",
+    "padding": "-154.72rem 8.19em 2px 18.19rem",
+    "transform": "translate(6px 2.18em) rotate(16.81deg) scale(0.91)",
+  },
+  "18%": Object {
+    "border": "3px solid #d90025",
+    "left": "calc(172px + 1.47rem)",
+    "opacity": "0.93",
+    "padding": "-163.17rem 8.53em 1px 18.53rem",
+    "transform": "translate(6px 2.15em) rotate(16.47deg) scale(0.93)",
+  },
+  "19%": Object {
+    "border": "3px solid #e1001d",
+    "left": "calc(178px + 1.17rem)",
+    "opacity": "0.94",
+    "padding": "-170.64rem 8.83em 1px 18.83rem",
+    "transform": "translate(6px 2.12em) rotate(16.17deg) scale(0.94)",
+  },
+  "2%": Object {
+    "border": "1px solid #0b00f3",
+    "left": "calc(19px + 9.54rem)",
+    "opacity": "0.52",
+    "padding": "38.47rem 0.46em 10px 10.46rem",
+    "transform": "translate(10px 2.95em) rotate(24.54deg) scale(0.52)",
+  },
+  "20%": Object {
+    "border": "3px solid #e60018",
+    "left": "calc(182px + 0.95rem)",
+    "opacity": "0.95",
+    "padding": "-176.29rem 9.05em 1px 19.05rem",
+    "transform": "translate(5px 2.09em) rotate(15.95deg) scale(0.95)",
+  },
+  "21%": Object {
+    "border": "3px solid #ec0012",
+    "left": "calc(186px + 0.72rem)",
+    "opacity": "0.96",
+    "padding": "-182.07rem 9.28em 1px 19.28rem",
+    "transform": "translate(5px 2.07em) rotate(15.72deg) scale(0.96)",
+  },
+  "22%": Object {
+    "border": "3px solid #f1000d",
+    "left": "calc(190px + 0.52rem)",
+    "opacity": "0.97",
+    "padding": "-187.02rem 9.48em 1px 19.48rem",
+    "transform": "translate(5px 2.05em) rotate(15.52deg) scale(0.97)",
+  },
+  "23%": Object {
+    "border": "3px solid #f50009",
+    "left": "calc(193px + 0.37rem)",
     "opacity": "0.98",
-    "padding": "-191.23rem 9.65em 0 19.65rem",
-    "transform": "translate(5px 2.04em) rotate(15.35deg) scale(0.98)",
+    "padding": "-190.67rem 9.63em 0 19.63rem",
+    "transform": "translate(5px 2.04em) rotate(15.37deg) scale(0.98)",
   },
-  "30.77%": Object {
+  "24%": Object {
+    "border": "3px solid #f90005",
+    "left": "calc(196px + 0.23rem)",
+    "opacity": "0.99",
+    "padding": "-194.29rem 9.77em 0 19.77rem",
+    "transform": "translate(5px 2.02em) rotate(15.23deg) scale(0.99)",
+  },
+  "25%": Object {
+    "border": "3px solid #fb0003",
+    "left": "calc(198px + 0.12rem)",
+    "opacity": "0.99",
+    "padding": "-196.89rem 9.88em 0 19.88rem",
+    "transform": "translate(5px 2.01em) rotate(15.12deg) scale(0.99)",
+  },
+  "26%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.02rem)",
+    "opacity": "1",
+    "padding": "-199.41rem 9.98em 0 19.98rem",
+    "transform": "translate(5px 2em) rotate(15.02deg) scale(1)",
+  },
+  "27%": Object {
+    "border": "3px solid #fffffe",
+    "left": "calc(201px + -0.06rem)",
+    "opacity": "1",
+    "padding": "-201.42rem 10.06em 0 20.06rem",
+    "transform": "translate(5px 1.99em) rotate(14.94deg) scale(1)",
+  },
+  "28%": Object {
+    "border": "3px solid #00fffd",
+    "left": "calc(202px + -0.11rem)",
+    "opacity": "1.01",
+    "padding": "-202.8rem 10.11em 0 20.11rem",
+    "transform": "translate(5px 1.99em) rotate(14.89deg) scale(1.01)",
+  },
+  "29%": Object {
+    "border": "3px solid #02fffb",
+    "left": "calc(203px + -0.16rem)",
+    "opacity": "1.01",
+    "padding": "-204.04rem 10.16em 0 20.16rem",
+    "transform": "translate(5px 1.98em) rotate(14.84deg) scale(1.01)",
+  },
+  "3%": Object {
+    "border": "1px solid #1500e9",
+    "left": "calc(26px + 9.17rem)",
+    "opacity": "0.54",
+    "padding": "29.24rem 0.83em 9px 10.83rem",
+    "transform": "translate(10px 2.92em) rotate(24.17deg) scale(0.54)",
+  },
+  "30%": Object {
+    "border": "3px solid #03fffa",
+    "left": "calc(204px + -0.2rem)",
+    "opacity": "1.01",
+    "padding": "-204.95rem 10.2em 0 20.2rem",
+    "transform": "translate(5px 1.98em) rotate(14.8deg) scale(1.01)",
+  },
+  "31%": Object {
+    "border": "3px solid #03fffa",
+    "left": "calc(204px + -0.22rem)",
+    "opacity": "1.01",
+    "padding": "-205.51rem 10.22em 0 20.22rem",
+    "transform": "translate(5px 1.98em) rotate(14.78deg) scale(1.01)",
+  },
+  "32%": Object {
+    "border": "3px solid #04fff9",
+    "left": "calc(205px + -0.24rem)",
+    "opacity": "1.01",
+    "padding": "-205.93rem 10.24em 0 20.24rem",
+    "transform": "translate(5px 1.98em) rotate(14.76deg) scale(1.01)",
+  },
+  "33%": Object {
+    "border": "3px solid #04fff9",
+    "left": "calc(205px + -0.25rem)",
+    "opacity": "1.01",
+    "padding": "-206.14rem 10.25em 0 20.25rem",
+    "transform": "translate(5px 1.98em) rotate(14.75deg) scale(1.01)",
+  },
+  "34%": Object {
+    "border": "3px solid #04fff9",
+    "left": "calc(205px + -0.25rem)",
+    "opacity": "1.01",
+    "padding": "-206.2rem 10.25em 0 20.25rem",
+    "transform": "translate(5px 1.98em) rotate(14.75deg) scale(1.01)",
+  },
+  "35%": Object {
+    "border": "3px solid #04fff9",
+    "left": "calc(205px + -0.25rem)",
+    "opacity": "1.01",
+    "padding": "-206.13rem 10.25em 0 20.25rem",
+    "transform": "translate(5px 1.98em) rotate(14.75deg) scale(1.01)",
+  },
+  "36%": Object {
+    "border": "3px solid #04fff9",
+    "left": "calc(205px + -0.24rem)",
+    "opacity": "1.01",
+    "padding": "-205.96rem 10.24em 0 20.24rem",
+    "transform": "translate(5px 1.98em) rotate(14.76deg) scale(1.01)",
+  },
+  "37%": Object {
+    "border": "3px solid #03fffa",
+    "left": "calc(204px + -0.23rem)",
+    "opacity": "1.01",
+    "padding": "-205.74rem 10.23em 0 20.23rem",
+    "transform": "translate(5px 1.98em) rotate(14.77deg) scale(1.01)",
+  },
+  "38%": Object {
     "border": "3px solid #03fffa",
     "left": "calc(204px + -0.22rem)",
     "opacity": "1.01",
     "padding": "-205.43rem 10.22em 0 20.22rem",
     "transform": "translate(5px 1.98em) rotate(14.78deg) scale(1.01)",
   },
-  "38.46%": Object {
+  "39%": Object {
     "border": "3px solid #03fffa",
-    "left": "calc(204px + -0.21rem)",
+    "left": "calc(204px + -0.2rem)",
     "opacity": "1.01",
-    "padding": "-205.28rem 10.21em 0 20.21rem",
-    "transform": "translate(5px 1.98em) rotate(14.79deg) scale(1.01)",
+    "padding": "-205.12rem 10.2em 0 20.2rem",
+    "transform": "translate(5px 1.98em) rotate(14.8deg) scale(1.01)",
   },
-  "46.15%": Object {
+  "4%": Object {
+    "border": "1px solid #2200dc",
+    "left": "calc(36px + 8.65rem)",
+    "opacity": "0.57",
+    "padding": "16.27rem 1.35em 9px 11.35rem",
+    "transform": "translate(9px 2.87em) rotate(23.65deg) scale(0.57)",
+  },
+  "40%": Object {
+    "border": "3px solid #02fffb",
+    "left": "calc(204px + -0.19rem)",
+    "opacity": "1.01",
+    "padding": "-204.74rem 10.19em 0 20.19rem",
+    "transform": "translate(5px 1.98em) rotate(14.81deg) scale(1.01)",
+  },
+  "41%": Object {
+    "border": "3px solid #02fffb",
+    "left": "calc(203px + -0.17rem)",
+    "opacity": "1.01",
+    "padding": "-204.34rem 10.17em 0 20.17rem",
+    "transform": "translate(5px 1.98em) rotate(14.83deg) scale(1.01)",
+  },
+  "42%": Object {
+    "border": "3px solid #02fffb",
+    "left": "calc(203px + -0.16rem)",
+    "opacity": "1.01",
+    "padding": "-204rem 10.16em 0 20.16rem",
+    "transform": "translate(5px 1.98em) rotate(14.84deg) scale(1.01)",
+  },
+  "43%": Object {
+    "border": "3px solid #01fffc",
+    "left": "calc(203px + -0.14rem)",
+    "opacity": "1.01",
+    "padding": "-203.6rem 10.14em 0 20.14rem",
+    "transform": "translate(5px 1.99em) rotate(14.86deg) scale(1.01)",
+  },
+  "44%": Object {
+    "border": "3px solid #01fffc",
+    "left": "calc(202px + -0.13rem)",
+    "opacity": "1.01",
+    "padding": "-203.21rem 10.13em 0 20.13rem",
+    "transform": "translate(5px 1.99em) rotate(14.87deg) scale(1.01)",
+  },
+  "45%": Object {
+    "border": "3px solid #00fffd",
+    "left": "calc(202px + -0.12rem)",
+    "opacity": "1.01",
+    "padding": "-202.88rem 10.12em 0 20.12rem",
+    "transform": "translate(5px 1.99em) rotate(14.88deg) scale(1.01)",
+  },
+  "46%": Object {
     "border": "3px solid #00fffd",
     "left": "calc(202px + -0.1rem)",
-    "opacity": "1",
-    "padding": "-202.48rem 10.1em 0 20.1rem",
-    "transform": "translate(5px 1.99em) rotate(14.9deg) scale(1)",
+    "opacity": "1.01",
+    "padding": "-202.53rem 10.1em 0 20.1rem",
+    "transform": "translate(5px 1.99em) rotate(14.9deg) scale(1.01)",
   },
-  "53.85%": Object {
-    "border": "3px solid #feffff",
-    "left": "calc(200px + -0.03rem)",
+  "47%": Object {
+    "border": "3px solid #00fffd",
+    "left": "calc(202px + -0.09rem)",
     "opacity": "1",
-    "padding": "-200.64rem 10.03em 0 20.03rem",
+    "padding": "-202.19rem 10.09em 0 20.09rem",
+    "transform": "translate(5px 1.99em) rotate(14.91deg) scale(1)",
+  },
+  "48%": Object {
+    "border": "3px solid #fffffe",
+    "left": "calc(201px + -0.08rem)",
+    "opacity": "1",
+    "padding": "-201.92rem 10.08em 0 20.08rem",
+    "transform": "translate(5px 1.99em) rotate(14.92deg) scale(1)",
+  },
+  "49%": Object {
+    "border": "3px solid #fffffe",
+    "left": "calc(201px + -0.07rem)",
+    "opacity": "1",
+    "padding": "-201.63rem 10.07em 0 20.07rem",
+    "transform": "translate(5px 1.99em) rotate(14.93deg) scale(1)",
+  },
+  "5%": Object {
+    "border": "1px solid #3100cd",
+    "left": "calc(47px + 8.07rem)",
+    "opacity": "0.6",
+    "padding": "1.63rem 1.93em 8px 11.93rem",
+    "transform": "translate(9px 2.81em) rotate(23.07deg) scale(0.6)",
+  },
+  "50%": Object {
+    "border": "3px solid #fffffe",
+    "left": "calc(201px + -0.06rem)",
+    "opacity": "1",
+    "padding": "-201.41rem 10.06em 0 20.06rem",
+    "transform": "translate(5px 1.99em) rotate(14.94deg) scale(1)",
+  },
+  "51%": Object {
+    "border": "3px solid #fffffe",
+    "left": "calc(201px + -0.05rem)",
+    "opacity": "1",
+    "padding": "-201.17rem 10.05em 0 20.05rem",
+    "transform": "translate(5px 2em) rotate(14.95deg) scale(1)",
+  },
+  "52%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(201px + -0.04rem)",
+    "opacity": "1",
+    "padding": "-200.95rem 10.04em 0 20.04rem",
+    "transform": "translate(5px 2em) rotate(14.96deg) scale(1)",
+  },
+  "53%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(201px + -0.03rem)",
+    "opacity": "1",
+    "padding": "-200.79rem 10.03em 0 20.03rem",
     "transform": "translate(5px 2em) rotate(14.97deg) scale(1)",
   },
-  "61.54%": Object {
-    "border": "3px solid #fe0000",
+  "54%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + -0.02rem)",
+    "opacity": "1",
+    "padding": "-200.62rem 10.02em 0 20.02rem",
+    "transform": "translate(5px 2em) rotate(14.98deg) scale(1)",
+  },
+  "55%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + -0.02rem)",
+    "opacity": "1",
+    "padding": "-200.47rem 10.02em 0 20.02rem",
+    "transform": "translate(5px 2em) rotate(14.98deg) scale(1)",
+  },
+  "56%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + -0.01rem)",
+    "opacity": "1",
+    "padding": "-200.36rem 10.01em 0 20.01rem",
+    "transform": "translate(5px 2em) rotate(14.99deg) scale(1)",
+  },
+  "57%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + -0.01rem)",
+    "opacity": "1",
+    "padding": "-200.25rem 10.01em 0 20.01rem",
+    "transform": "translate(5px 2em) rotate(14.99deg) scale(1)",
+  },
+  "58%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + -0.01rem)",
+    "opacity": "1",
+    "padding": "-200.16rem 10.01em 0 20.01rem",
+    "transform": "translate(5px 2em) rotate(14.99deg) scale(1)",
+  },
+  "59%": Object {
+    "border": "3px solid #feffff",
     "left": "calc(200px + 0)",
     "opacity": "1",
-    "padding": "-199.95rem 10em 0 20rem",
+    "padding": "-200.09rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
-  "69.23%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
-    "padding": "-199.85rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  "6%": Object {
+    "border": "1px solid #3e00c0",
+    "left": "calc(57px + 7.53rem)",
+    "opacity": "0.62",
+    "padding": "-11.76rem 2.47em 8px 12.47rem",
+    "transform": "translate(9px 2.75em) rotate(22.53deg) scale(0.62)",
   },
-  "7.69%": Object {
-    "border": "2px solid #5b00a3",
-    "left": "calc(78px + 6.42rem)",
-    "opacity": "0.68",
-    "padding": "-39.54rem 3.58em 6px 13.58rem",
-    "transform": "translate(8px 2.64em) rotate(21.42deg) scale(0.68)",
-  },
-  "76.92%": Object {
-    "border": "3px solid #fe0000",
+  "60%": Object {
+    "border": "3px solid #feffff",
     "left": "calc(200px + 0)",
     "opacity": "1",
-    "padding": "-199.91rem 10em 0 20rem",
+    "padding": "-200.03rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
-  "84.62%": Object {
+  "61%": Object {
     "border": "3px solid #fe0000",
     "left": "calc(200px + 0)",
     "opacity": "1",
     "padding": "-199.97rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
-  "92.31%": Object {
+  "62%": Object {
     "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.94rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "63%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.91rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "64%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.88rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "65%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.87rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "66%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.85rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "67%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.85rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "68%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.85rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "69%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.85rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "7%": Object {
+    "border": "2px solid #4f00af",
+    "left": "calc(69px + 6.88rem)",
+    "opacity": "0.66",
+    "padding": "-27.91rem 3.12em 7px 13.12rem",
+    "transform": "translate(8px 2.69em) rotate(21.88deg) scale(0.66)",
+  },
+  "70%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.85rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "71%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.86rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "72%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.86rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "73%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0.01rem)",
+    "opacity": "1",
+    "padding": "-199.87rem 9.99em 0 19.99rem",
+    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
+  },
+  "74%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.88rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "75%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.89rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "76%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.9rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "77%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.91rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "78%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.92rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "79%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.93rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "8%": Object {
+    "border": "2px solid #60009e",
+    "left": "calc(82px + 6.23rem)",
+    "opacity": "0.69",
+    "padding": "-44.19rem 3.77em 6px 13.77rem",
+    "transform": "translate(8px 2.62em) rotate(21.23deg) scale(0.69)",
+  },
+  "80%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.94rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "81%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.94rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "82%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.95rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "83%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.96rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "84%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.96rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "85%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.97rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "86%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.98rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "87%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.98rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "88%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.98rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "89%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.99rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "9%": Object {
+    "border": "2px solid #6e0090",
+    "left": "calc(92px + 5.68rem)",
+    "opacity": "0.72",
+    "padding": "-57.99rem 4.32em 6px 14.32rem",
+    "transform": "translate(8px 2.57em) rotate(20.68deg) scale(0.72)",
+  },
+  "90%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.99rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "91%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-199.99rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "92%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "93%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "94%": Object {
+    "border": "3px solid #fe0000",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "95%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "96%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "97%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "98%": Object {
+    "border": "3px solid #feffff",
+    "left": "calc(200px + 0)",
+    "opacity": "1",
+    "padding": "-200rem 10em 0 20rem",
+    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
+  },
+  "99%": Object {
+    "border": "3px solid #feffff",
     "left": "calc(200px + 0)",
     "opacity": "1",
     "padding": "-200rem 10em 0 20rem",
@@ -108,44 +717,305 @@ Object {
   "0%": Object {
     "border": "1px solid #0000fe",
   },
+  "1%": Object {
+    "border": "1px solid #0203fc",
+  },
+  "10%": Object {
+    "border": "13px solid #5b6baa",
+  },
   "100%": Object {
     "border": "25px solid #bada55",
   },
-  "15.385%": Object {
-    "border": "19px solid #8da67d",
+  "11%": Object {
+    "border": "14px solid #6778a0",
   },
-  "23.077%": Object {
-    "border": "24px solid #b3d25a",
+  "12%": Object {
+    "border": "15px solid #708398",
   },
-  "30.769%": Object {
+  "13%": Object {
+    "border": "17px solid #7a8f8f",
+  },
+  "14%": Object {
+    "border": "18px solid #829888",
+  },
+  "15%": Object {
+    "border": "19px solid #8aa280",
+  },
+  "16%": Object {
+    "border": "20px solid #92ab79",
+  },
+  "17%": Object {
+    "border": "21px solid #98b273",
+  },
+  "18%": Object {
+    "border": "21px solid #9eb96e",
+  },
+  "19%": Object {
+    "border": "22px solid #a4c068",
+  },
+  "2%": Object {
+    "border": "2px solid #080af7",
+  },
+  "20%": Object {
+    "border": "23px solid #a8c565",
+  },
+  "21%": Object {
+    "border": "23px solid #acca61",
+  },
+  "22%": Object {
+    "border": "24px solid #b0ce5d",
+  },
+  "23%": Object {
+    "border": "24px solid #b3d15b",
+  },
+  "24%": Object {
+    "border": "24px solid #b5d558",
+  },
+  "25%": Object {
+    "border": "25px solid #b7d757",
+  },
+  "26%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "27%": Object {
+    "border": "25px solid #bbdb54",
+  },
+  "28%": Object {
+    "border": "25px solid #bcdc53",
+  },
+  "29%": Object {
+    "border": "25px solid #bddd52",
+  },
+  "3%": Object {
+    "border": "3px solid #0f12f0",
+  },
+  "30%": Object {
+    "border": "25px solid #bdde51",
+  },
+  "31%": Object {
     "border": "26px solid #bede51",
   },
-  "38.462%": Object {
-    "border": "26px solid #bdde51",
+  "32%": Object {
+    "border": "26px solid #bedf50",
   },
-  "46.154%": Object {
+  "33%": Object {
+    "border": "26px solid #bedf50",
+  },
+  "34%": Object {
+    "border": "26px solid #bedf50",
+  },
+  "35%": Object {
+    "border": "26px solid #bedf50",
+  },
+  "36%": Object {
+    "border": "26px solid #bedf50",
+  },
+  "37%": Object {
+    "border": "26px solid #bedf51",
+  },
+  "38%": Object {
+    "border": "26px solid #bede51",
+  },
+  "39%": Object {
+    "border": "25px solid #bdde51",
+  },
+  "4%": Object {
+    "border": "4px solid #191de8",
+  },
+  "40%": Object {
+    "border": "25px solid #bdde51",
+  },
+  "41%": Object {
+    "border": "25px solid #bddd52",
+  },
+  "42%": Object {
+    "border": "25px solid #bcdd52",
+  },
+  "43%": Object {
+    "border": "25px solid #bcdd52",
+  },
+  "44%": Object {
+    "border": "25px solid #bcdc52",
+  },
+  "45%": Object {
+    "border": "25px solid #bcdc53",
+  },
+  "46%": Object {
     "border": "25px solid #bbdc53",
   },
-  "53.846%": Object {
+  "47%": Object {
+    "border": "25px solid #bbdb53",
+  },
+  "48%": Object {
+    "border": "25px solid #bbdb53",
+  },
+  "49%": Object {
+    "border": "25px solid #bbdb53",
+  },
+  "5%": Object {
+    "border": "6px solid #232ade",
+  },
+  "50%": Object {
+    "border": "25px solid #bbdb54",
+  },
+  "51%": Object {
+    "border": "25px solid #badb54",
+  },
+  "52%": Object {
     "border": "25px solid #bada54",
   },
-  "61.538%": Object {
+  "53%": Object {
+    "border": "25px solid #bada54",
+  },
+  "54%": Object {
+    "border": "25px solid #bada54",
+  },
+  "55%": Object {
+    "border": "25px solid #bada54",
+  },
+  "56%": Object {
+    "border": "25px solid #bada54",
+  },
+  "57%": Object {
+    "border": "25px solid #bada54",
+  },
+  "58%": Object {
+    "border": "25px solid #bada54",
+  },
+  "59%": Object {
+    "border": "25px solid #bada54",
+  },
+  "6%": Object {
+    "border": "7px solid #2d35d5",
+  },
+  "60%": Object {
+    "border": "25px solid #bada54",
+  },
+  "61%": Object {
     "border": "25px solid #b9d955",
   },
-  "69.231%": Object {
+  "62%": Object {
     "border": "25px solid #b9d955",
   },
-  "7.692%": Object {
-    "border": "10px solid #424ec2",
-  },
-  "76.923%": Object {
+  "63%": Object {
     "border": "25px solid #b9d955",
   },
-  "84.615%": Object {
+  "64%": Object {
     "border": "25px solid #b9d955",
   },
-  "92.308%": Object {
+  "65%": Object {
     "border": "25px solid #b9d955",
+  },
+  "66%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "67%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "68%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "69%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "7%": Object {
+    "border": "8px solid #3943ca",
+  },
+  "70%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "71%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "72%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "73%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "74%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "75%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "76%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "77%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "78%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "79%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "8%": Object {
+    "border": "10px solid #4652be",
+  },
+  "80%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "81%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "82%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "83%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "84%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "85%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "86%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "87%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "88%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "89%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "9%": Object {
+    "border": "11px solid #505eb5",
+  },
+  "90%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "91%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "92%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "93%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "94%": Object {
+    "border": "25px solid #b9d955",
+  },
+  "95%": Object {
+    "border": "25px solid #bada54",
+  },
+  "96%": Object {
+    "border": "25px solid #bada54",
+  },
+  "97%": Object {
+    "border": "25px solid #bada54",
+  },
+  "98%": Object {
+    "border": "25px solid #bada54",
+  },
+  "99%": Object {
+    "border": "25px solid #bada54",
   },
 }
 `;

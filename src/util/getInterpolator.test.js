@@ -26,17 +26,11 @@ describe('interpolateColor', () => {
 describe('getInterpolator', () => {
   const interpolator = getInterpolator(0.5, 0.5, 10)
 
-  test('interpolator provides steps cound and interpolate methods', () => {
+  test('interpolator provides interpolate methods', () => {
     expect(interpolator).toMatchObject({
-      steps: 10,
       fixed: expect.any(Function),
       number: expect.any(Function),
       hex: expect.any(Function),
-    })
-
-    const withDefaultStepCount = getInterpolator(0.5, 0.5)
-    expect(withDefaultStepCount).toMatchObject({
-      steps: 100,
     })
   })
 

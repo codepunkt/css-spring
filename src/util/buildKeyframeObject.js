@@ -12,8 +12,8 @@ const buildKeyframeObject = (obj, keyframePercentages) => {
     const element = keyframePercentages[i]
     result[element] = {}
 
-    for (let [key, value] of Object.entries(obj)) {
-      result[element] = value.reduce((accu, part) => {
+    for (let key of Object.keys(obj)) {
+      result[element] = obj[key].reduce((accu, part) => {
         switch (part.type) {
           case 'Dimension':
           case 'Fixed':

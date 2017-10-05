@@ -35,8 +35,8 @@ export const addInterpolatedValue = (interpolator, parts, precision) =>
   })
 
 const addInterpolatedValues = (interpolator, values, precision) => {
-  for (let [key, value] of Object.entries(values)) {
-    values[key] = addInterpolatedValue(interpolator, value, precision)
+  for (let key of Object.keys(values)) {
+    values[key] = addInterpolatedValue(interpolator, values[key], precision)
   }
 
   return values

@@ -11,22 +11,22 @@ import addInterpolatedValues from './util/addInterpolatedValues'
 
 // const log = obj => console.dir(obj, { colors: true, depth: null })
 
-// spring presets. selected combinations of stiffness/damping.
+// spring presets. selected combinations of tension/wobble.
 const presets = {
-  noWobble: { stiffness: 170, damping: 26 },
-  gentle: { stiffness: 120, damping: 14 },
-  wobbly: { stiffness: 180, damping: 12 },
-  stiff: { stiffness: 210, damping: 20 },
+  noWobble: { tension: 0.6, wobble: 0 },
+  gentle: { tension: 0.2, wobble: 0.6 },
+  wobbly: { tension: 0.6, wobble: 0.7 },
+  stiff: { tension: 0.5, wobble: 0.5 },
 }
 
 // default spring options.
-// damping and precision reflect the values of the `wobbly` preset,
+// tension and wobble reflect the values of the `wobbly` preset,
 const defaultOptions = {
-  damping: 12,
   keyframePrecision: 2,
   precision: 2,
-  stiffness: 180,
   steps: 100,
+  tension: 0.6,
+  wobble: 0.7,
 }
 
 // css-spring
@@ -34,14 +34,13 @@ const defaultOptions = {
 // invoke with startStyles, endStyles and options and gain a keyframe
 // style object with interpolated values.
 const spring = (startStyles, endStyles, options = {}) => {
-  // define stiffness, damping and precision based on default options
-  // and options given in arguments.
+  // derive options from default options and arguments
   const {
-    damping,
     keyframePrecision,
     precision,
     steps,
-    stiffness,
+    tension,
+    wobble,
   } = Object.assign({}, defaultOptions, options, presets[options.preset] || {})
 
   // parse style declarations of both start and end styles and sanitize
@@ -57,9 +56,6 @@ const spring = (startStyles, endStyles, options = {}) => {
   if (isEmpty(declarations)) {
     return
   }
-
-  const tension = 0.5
-  const wobble = 0.5
 
   const interpolator = getInterpolator(tension, wobble, steps)
 

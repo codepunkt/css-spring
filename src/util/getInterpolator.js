@@ -26,7 +26,7 @@ export const interpolateColor = (a, b, amount) => {
   )
 }
 
-const getInterpolator = (tension, wobble, steps = 100) => {
+const getInterpolator = (tension, wobble, steps) => {
   const spring = springer(tension, wobble)
 
   return {

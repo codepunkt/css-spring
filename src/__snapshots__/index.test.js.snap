@@ -166,7 +166,6 @@ Object {
   "29%": Object {
     "border": "3px solid #02fffb",
     "left": "calc(203px + -0.16rem)",
-    "opacity": "1.01",
     "padding": "-204.04rem 10.16em 0 20.16rem",
     "transform": "translate(5px 1.98em) rotate(14.84deg) scale(1.01)",
   },
@@ -180,70 +179,54 @@ Object {
   "30%": Object {
     "border": "3px solid #03fffa",
     "left": "calc(204px + -0.2rem)",
-    "opacity": "1.01",
     "padding": "-204.95rem 10.2em 0 20.2rem",
     "transform": "translate(5px 1.98em) rotate(14.8deg) scale(1.01)",
   },
   "31%": Object {
     "border": "3px solid #03fffa",
     "left": "calc(204px + -0.22rem)",
-    "opacity": "1.01",
     "padding": "-205.51rem 10.22em 0 20.22rem",
     "transform": "translate(5px 1.98em) rotate(14.78deg) scale(1.01)",
   },
   "32%": Object {
     "border": "3px solid #04fff9",
     "left": "calc(205px + -0.24rem)",
-    "opacity": "1.01",
     "padding": "-205.93rem 10.24em 0 20.24rem",
     "transform": "translate(5px 1.98em) rotate(14.76deg) scale(1.01)",
   },
   "33%": Object {
-    "border": "3px solid #04fff9",
     "left": "calc(205px + -0.25rem)",
-    "opacity": "1.01",
     "padding": "-206.14rem 10.25em 0 20.25rem",
     "transform": "translate(5px 1.98em) rotate(14.75deg) scale(1.01)",
   },
   "34%": Object {
-    "border": "3px solid #04fff9",
-    "left": "calc(205px + -0.25rem)",
-    "opacity": "1.01",
     "padding": "-206.2rem 10.25em 0 20.25rem",
-    "transform": "translate(5px 1.98em) rotate(14.75deg) scale(1.01)",
   },
   "35%": Object {
-    "border": "3px solid #04fff9",
     "left": "calc(205px + -0.25rem)",
-    "opacity": "1.01",
     "padding": "-206.13rem 10.25em 0 20.25rem",
     "transform": "translate(5px 1.98em) rotate(14.75deg) scale(1.01)",
   },
   "36%": Object {
     "border": "3px solid #04fff9",
     "left": "calc(205px + -0.24rem)",
-    "opacity": "1.01",
     "padding": "-205.96rem 10.24em 0 20.24rem",
     "transform": "translate(5px 1.98em) rotate(14.76deg) scale(1.01)",
   },
   "37%": Object {
     "border": "3px solid #03fffa",
     "left": "calc(204px + -0.23rem)",
-    "opacity": "1.01",
     "padding": "-205.74rem 10.23em 0 20.23rem",
     "transform": "translate(5px 1.98em) rotate(14.77deg) scale(1.01)",
   },
   "38%": Object {
-    "border": "3px solid #03fffa",
     "left": "calc(204px + -0.22rem)",
-    "opacity": "1.01",
     "padding": "-205.43rem 10.22em 0 20.22rem",
     "transform": "translate(5px 1.98em) rotate(14.78deg) scale(1.01)",
   },
   "39%": Object {
     "border": "3px solid #03fffa",
     "left": "calc(204px + -0.2rem)",
-    "opacity": "1.01",
     "padding": "-205.12rem 10.2em 0 20.2rem",
     "transform": "translate(5px 1.98em) rotate(14.8deg) scale(1.01)",
   },
@@ -257,47 +240,39 @@ Object {
   "40%": Object {
     "border": "3px solid #02fffb",
     "left": "calc(204px + -0.19rem)",
-    "opacity": "1.01",
     "padding": "-204.74rem 10.19em 0 20.19rem",
     "transform": "translate(5px 1.98em) rotate(14.81deg) scale(1.01)",
   },
   "41%": Object {
-    "border": "3px solid #02fffb",
     "left": "calc(203px + -0.17rem)",
-    "opacity": "1.01",
     "padding": "-204.34rem 10.17em 0 20.17rem",
     "transform": "translate(5px 1.98em) rotate(14.83deg) scale(1.01)",
   },
   "42%": Object {
     "border": "3px solid #02fffb",
     "left": "calc(203px + -0.16rem)",
-    "opacity": "1.01",
     "padding": "-204rem 10.16em 0 20.16rem",
     "transform": "translate(5px 1.98em) rotate(14.84deg) scale(1.01)",
   },
   "43%": Object {
     "border": "3px solid #01fffc",
     "left": "calc(203px + -0.14rem)",
-    "opacity": "1.01",
     "padding": "-203.6rem 10.14em 0 20.14rem",
     "transform": "translate(5px 1.99em) rotate(14.86deg) scale(1.01)",
   },
   "44%": Object {
     "border": "3px solid #01fffc",
     "left": "calc(202px + -0.13rem)",
-    "opacity": "1.01",
     "padding": "-203.21rem 10.13em 0 20.13rem",
     "transform": "translate(5px 1.99em) rotate(14.87deg) scale(1.01)",
   },
   "45%": Object {
     "border": "3px solid #00fffd",
     "left": "calc(202px + -0.12rem)",
-    "opacity": "1.01",
     "padding": "-202.88rem 10.12em 0 20.12rem",
     "transform": "translate(5px 1.99em) rotate(14.88deg) scale(1.01)",
   },
   "46%": Object {
-    "border": "3px solid #00fffd",
     "left": "calc(202px + -0.1rem)",
     "opacity": "1.01",
     "padding": "-202.53rem 10.1em 0 20.1rem",
@@ -313,14 +288,11 @@ Object {
   "48%": Object {
     "border": "3px solid #fffffe",
     "left": "calc(201px + -0.08rem)",
-    "opacity": "1",
     "padding": "-201.92rem 10.08em 0 20.08rem",
     "transform": "translate(5px 1.99em) rotate(14.92deg) scale(1)",
   },
   "49%": Object {
-    "border": "3px solid #fffffe",
     "left": "calc(201px + -0.07rem)",
-    "opacity": "1",
     "padding": "-201.63rem 10.07em 0 20.07rem",
     "transform": "translate(5px 1.99em) rotate(14.93deg) scale(1)",
   },
@@ -332,72 +304,52 @@ Object {
     "transform": "translate(9px 2.81em) rotate(23.07deg) scale(0.6)",
   },
   "50%": Object {
-    "border": "3px solid #fffffe",
     "left": "calc(201px + -0.06rem)",
-    "opacity": "1",
     "padding": "-201.41rem 10.06em 0 20.06rem",
     "transform": "translate(5px 1.99em) rotate(14.94deg) scale(1)",
   },
   "51%": Object {
     "border": "3px solid #fffffe",
     "left": "calc(201px + -0.05rem)",
-    "opacity": "1",
     "padding": "-201.17rem 10.05em 0 20.05rem",
     "transform": "translate(5px 2em) rotate(14.95deg) scale(1)",
   },
   "52%": Object {
     "border": "3px solid #feffff",
     "left": "calc(201px + -0.04rem)",
-    "opacity": "1",
     "padding": "-200.95rem 10.04em 0 20.04rem",
     "transform": "translate(5px 2em) rotate(14.96deg) scale(1)",
   },
   "53%": Object {
-    "border": "3px solid #feffff",
     "left": "calc(201px + -0.03rem)",
-    "opacity": "1",
     "padding": "-200.79rem 10.03em 0 20.03rem",
     "transform": "translate(5px 2em) rotate(14.97deg) scale(1)",
   },
   "54%": Object {
-    "border": "3px solid #feffff",
     "left": "calc(200px + -0.02rem)",
-    "opacity": "1",
     "padding": "-200.62rem 10.02em 0 20.02rem",
     "transform": "translate(5px 2em) rotate(14.98deg) scale(1)",
   },
   "55%": Object {
-    "border": "3px solid #feffff",
     "left": "calc(200px + -0.02rem)",
-    "opacity": "1",
     "padding": "-200.47rem 10.02em 0 20.02rem",
     "transform": "translate(5px 2em) rotate(14.98deg) scale(1)",
   },
   "56%": Object {
-    "border": "3px solid #feffff",
     "left": "calc(200px + -0.01rem)",
-    "opacity": "1",
     "padding": "-200.36rem 10.01em 0 20.01rem",
     "transform": "translate(5px 2em) rotate(14.99deg) scale(1)",
   },
   "57%": Object {
-    "border": "3px solid #feffff",
-    "left": "calc(200px + -0.01rem)",
-    "opacity": "1",
     "padding": "-200.25rem 10.01em 0 20.01rem",
-    "transform": "translate(5px 2em) rotate(14.99deg) scale(1)",
   },
   "58%": Object {
-    "border": "3px solid #feffff",
     "left": "calc(200px + -0.01rem)",
-    "opacity": "1",
     "padding": "-200.16rem 10.01em 0 20.01rem",
     "transform": "translate(5px 2em) rotate(14.99deg) scale(1)",
   },
   "59%": Object {
-    "border": "3px solid #feffff",
     "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-200.09rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
@@ -410,73 +362,30 @@ Object {
   },
   "60%": Object {
     "border": "3px solid #feffff",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-200.03rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "61%": Object {
     "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.97rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "62%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.94rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "63%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.91rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "64%": Object {
-    "border": "3px solid #fe0000",
     "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.88rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "65%": Object {
-    "border": "3px solid #fe0000",
     "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
     "padding": "-199.87rem 9.99em 0 19.99rem",
     "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
   },
   "66%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
     "padding": "-199.85rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
-  },
-  "67%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
-    "padding": "-199.85rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
-  },
-  "68%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
-    "padding": "-199.85rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
-  },
-  "69%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
-    "padding": "-199.85rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
   },
   "7%": Object {
     "border": "2px solid #4f00af",
@@ -486,74 +395,38 @@ Object {
     "transform": "translate(8px 2.69em) rotate(21.88deg) scale(0.66)",
   },
   "70%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
     "padding": "-199.85rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
   },
   "71%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
     "padding": "-199.86rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
   },
   "72%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
     "padding": "-199.86rem 9.99em 0 19.99rem",
-    "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
   },
   "73%": Object {
-    "border": "3px solid #fe0000",
     "left": "calc(200px + 0.01rem)",
-    "opacity": "1",
     "padding": "-199.87rem 9.99em 0 19.99rem",
     "transform": "translate(5px 2em) rotate(15.01deg) scale(1)",
   },
   "74%": Object {
-    "border": "3px solid #fe0000",
     "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.88rem 10em 0 20rem",
     "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "75%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.89rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "76%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.9rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "77%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.91rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "78%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.92rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "79%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.93rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "8%": Object {
     "border": "2px solid #60009e",
@@ -563,74 +436,31 @@ Object {
     "transform": "translate(8px 2.62em) rotate(21.23deg) scale(0.69)",
   },
   "80%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.94rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "81%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.94rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "82%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.95rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "83%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.96rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "84%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.96rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "85%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.97rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "86%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.98rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
-  },
-  "87%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-199.98rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "88%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.98rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "89%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.99rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "9%": Object {
     "border": "2px solid #6e0090",
@@ -639,75 +469,20 @@ Object {
     "padding": "-57.99rem 4.32em 6px 14.32rem",
     "transform": "translate(8px 2.57em) rotate(20.68deg) scale(0.72)",
   },
-  "90%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-199.99rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
-  },
   "91%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-199.99rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "92%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
     "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
-  },
-  "93%": Object {
-    "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "94%": Object {
     "border": "3px solid #fe0000",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "95%": Object {
     "border": "3px solid #feffff",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
-  },
-  "96%": Object {
-    "border": "3px solid #feffff",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
-  },
-  "97%": Object {
-    "border": "3px solid #feffff",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
-  },
-  "98%": Object {
-    "border": "3px solid #feffff",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
   "99%": Object {
     "border": "3px solid #feffff",
-    "left": "calc(200px + 0)",
-    "opacity": "1",
-    "padding": "-200rem 10em 0 20rem",
-    "transform": "translate(5px 2em) rotate(15deg) scale(1)",
   },
 }
 `;
@@ -798,15 +573,6 @@ Object {
   "32%": Object {
     "border": "26px solid #bedf50",
   },
-  "33%": Object {
-    "border": "26px solid #bedf50",
-  },
-  "34%": Object {
-    "border": "26px solid #bedf50",
-  },
-  "35%": Object {
-    "border": "26px solid #bedf50",
-  },
   "36%": Object {
     "border": "26px solid #bedf50",
   },
@@ -846,9 +612,6 @@ Object {
   "47%": Object {
     "border": "25px solid #bbdb53",
   },
-  "48%": Object {
-    "border": "25px solid #bbdb53",
-  },
   "49%": Object {
     "border": "25px solid #bbdb53",
   },
@@ -864,27 +627,6 @@ Object {
   "52%": Object {
     "border": "25px solid #bada54",
   },
-  "53%": Object {
-    "border": "25px solid #bada54",
-  },
-  "54%": Object {
-    "border": "25px solid #bada54",
-  },
-  "55%": Object {
-    "border": "25px solid #bada54",
-  },
-  "56%": Object {
-    "border": "25px solid #bada54",
-  },
-  "57%": Object {
-    "border": "25px solid #bada54",
-  },
-  "58%": Object {
-    "border": "25px solid #bada54",
-  },
-  "59%": Object {
-    "border": "25px solid #bada54",
-  },
   "6%": Object {
     "border": "7px solid #2d35d5",
   },
@@ -894,124 +636,19 @@ Object {
   "61%": Object {
     "border": "25px solid #b9d955",
   },
-  "62%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "63%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "64%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "65%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "66%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "67%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "68%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "69%": Object {
-    "border": "25px solid #b9d955",
-  },
   "7%": Object {
     "border": "8px solid #3943ca",
-  },
-  "70%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "71%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "72%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "73%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "74%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "75%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "76%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "77%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "78%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "79%": Object {
-    "border": "25px solid #b9d955",
   },
   "8%": Object {
     "border": "10px solid #4652be",
   },
-  "80%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "81%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "82%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "83%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "84%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "85%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "86%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "87%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "88%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "89%": Object {
-    "border": "25px solid #b9d955",
-  },
   "9%": Object {
     "border": "11px solid #505eb5",
-  },
-  "90%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "91%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "92%": Object {
-    "border": "25px solid #b9d955",
-  },
-  "93%": Object {
-    "border": "25px solid #b9d955",
   },
   "94%": Object {
     "border": "25px solid #b9d955",
   },
   "95%": Object {
-    "border": "25px solid #bada54",
-  },
-  "96%": Object {
-    "border": "25px solid #bada54",
-  },
-  "97%": Object {
-    "border": "25px solid #bada54",
-  },
-  "98%": Object {
     "border": "25px solid #bada54",
   },
   "99%": Object {

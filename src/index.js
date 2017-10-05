@@ -1,6 +1,7 @@
-const { walk, parse } = require('css-tree')
+import { isEmpty } from 'lodash'
 
 import toPrecision from './util/toPrecision'
+import optimizeOutput from './util/optimizeOutput'
 import sanitizeValues from './util/sanitizeValues'
 import getInterpolator from './util/getInterpolator'
 import parseDeclarations from './util/parseDeclarations'
@@ -53,10 +54,7 @@ const spring = (startStyles, endStyles, options = {}) => {
   )
 
   // quit if there are no interpolatable declarations
-  if (
-    Object.keys(declarations).length === 0 &&
-    declarations.constructor === Object
-  ) {
+  if (isEmpty(declarations)) {
     return
   }
 
@@ -77,9 +75,8 @@ const spring = (startStyles, endStyles, options = {}) => {
     precision
   )
 
-  return buildKeyframeObject(
-    declarationsWithInterpolatedValues,
-    keyframePercentages
+  return optimizeOutput(
+    buildKeyframeObject(declarationsWithInterpolatedValues, keyframePercentages)
   )
 }
 

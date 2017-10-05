@@ -1,6 +1,7 @@
-const { walk, parse } = require('css-tree')
+import { isEmpty } from 'lodash'
 
 import toPrecision from './util/toPrecision'
+import optimizeOutput from './util/optimizeOutput'
 import sanitizeValues from './util/sanitizeValues'
 import getInterpolator from './util/getInterpolator'
 import parseDeclarations from './util/parseDeclarations'
@@ -25,6 +26,7 @@ const defaultOptions = {
   keyframePrecision: 2,
   precision: 2,
   stiffness: 180,
+  steps: 100,
 }
 
 // css-spring
@@ -34,12 +36,13 @@ const defaultOptions = {
 const spring = (startStyles, endStyles, options = {}) => {
   // define stiffness, damping and precision based on default options
   // and options given in arguments.
-  const { damping, keyframePrecision, precision, stiffness } = Object.assign(
-    {},
-    defaultOptions,
-    options,
-    presets[options.preset] || {}
-  )
+  const {
+    damping,
+    keyframePrecision,
+    precision,
+    steps,
+    stiffness,
+  } = Object.assign({}, defaultOptions, options, presets[options.preset] || {})
 
   // parse style declarations of both start and end styles and sanitize
   // them to remove all value combinations that are not interpolatable
@@ -51,22 +54,18 @@ const spring = (startStyles, endStyles, options = {}) => {
   )
 
   // quit if there are no interpolatable declarations
-  if (
-    Object.keys(declarations).length === 0 &&
-    declarations.constructor === Object
-  ) {
+  if (isEmpty(declarations)) {
     return
   }
 
   const tension = 0.5
   const wobble = 0.5
-  const interpolationSteps = 13
 
-  const interpolator = getInterpolator(tension, wobble, interpolationSteps)
+  const interpolator = getInterpolator(tension, wobble, steps)
 
   // calculate keyframe percentages
-  const keyframePercentages = [...Array(interpolator.steps + 1)].map(
-    (_, i) => `${toPrecision(i * 100 / interpolator.steps, keyframePrecision)}%`
+  const keyframePercentages = [...Array(steps + 1)].map(
+    (_, i) => `${toPrecision(i * 100 / steps, keyframePrecision)}%`
   )
 
   // calculate interpolated values and add them to the declarations
@@ -76,9 +75,8 @@ const spring = (startStyles, endStyles, options = {}) => {
     precision
   )
 
-  return buildKeyframeObject(
-    declarationsWithInterpolatedValues,
-    keyframePercentages
+  return optimizeOutput(
+    buildKeyframeObject(declarationsWithInterpolatedValues, keyframePercentages)
   )
 }
 

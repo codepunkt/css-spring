@@ -1,4 +1,5 @@
-const { walk, parse } = require('css-tree')
+const parse = require('css-tree/lib/parser') // function
+const { walk } = require('css-tree/lib/walker')
 
 // returns top-level declarations
 const parseDeclarations = styles => {

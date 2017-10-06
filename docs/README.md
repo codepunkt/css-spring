@@ -1,7 +1,8 @@
 # css-spring 🚀
 
 [![NPM Version](https://img.shields.io/npm/v/css-spring.svg?style=flat&label=NPM%20Version)](http://npm.im/css-spring)
-[![Build Status](https://img.shields.io/travis/codepunkt/css-spring/master.svg?style=flat&label=Build%20Status)](https://travis-ci.org/codepunkt/css-spring)
+[![TravisCI Status](https://img.shields.io/travis/codepunkt/css-spring/master.svg?style=flat&label=TravisCI%20Status)](https://travis-ci.org/codepunkt/css-spring)
+[![CircleCI Status](https://img.shields.io/circleci/project/github/codepunkt/css-spring.svg?style=flat&label=CircleCI%20Status)](https://circleci.com/gh/codepunkt/css-spring)
 [![Code Coverage](https://img.shields.io/coveralls/codepunkt/css-spring/master.svg?style=flat&label=Code%20Coverage)](https://coveralls.io/github/codepunkt/css-spring?branch=master)
 [![MIT License](https://img.shields.io/npm/l/css-spring.svg?style=flat&label=License)](http://opensource.org/licenses/MIT)
 

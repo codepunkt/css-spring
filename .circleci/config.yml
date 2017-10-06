@@ -2,6 +2,9 @@ version: 2
 
 jobs:
   build-node-common: &build-node-common
+    docker:
+      - image: node
+
     steps:
       - checkout
 

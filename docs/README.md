@@ -1,5 +1,7 @@
 # css-spring 🚀
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/codepunkt/css-spring.svg)](https://greenkeeper.io/)
+
 [![NPM Version](https://img.shields.io/npm/v/css-spring.svg?style=flat&label=NPM%20Version)](http://npm.im/css-spring)
 [![TravisCI Status](https://img.shields.io/travis/codepunkt/css-spring/master.svg?style=flat&label=TravisCI%20Status)](https://travis-ci.org/codepunkt/css-spring)
 [![CircleCI Status](https://img.shields.io/circleci/project/github/codepunkt/css-spring.svg?style=flat&label=CircleCI%20Status)](https://circleci.com/gh/codepunkt/css-spring)

@@ -18,9 +18,9 @@
 import spring, { toString } from 'css-spring'
 
 const keyframes = spring(
-  { left: '0px', opacity: 0 },
-  { left: '250px', opacity: 1 },
-  { preset: 'wobbly', precision: 5 }
+&#9;{ left: '0px', opacity: 0 },
+&#9;{ left: '250px', opacity: 1 },
+&#9;{ preset: 'wobbly', precision: 5 }
 )
 
 const keyframeString = toString(keyframes)
@@ -69,6 +69,7 @@ const springLeft = toString(spring(
 
 const StyledDiv = styled.div`
   animation: ${keyframes`${springLeft}`} 1s linear infinite;
+  position: relative;
 `
 ```
 

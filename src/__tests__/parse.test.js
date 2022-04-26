@@ -72,6 +72,10 @@ describe('parse', () => {
         .toEqual({ start: 0, end: 10, unit: 'rem' })
       expect(parseValues('0px', 1))
         .toEqual({ start: 0, end: 1, unit: 'px' })
+      expect(parseValues('translate(0)', 'translate(30px)'))
+        .toEqual({ start: 0, end: 30, unit: 'px', wrapper: 'translate' })
+      expect(parseValues('scaleY(1.14)', 'scaleY(4.2)'))
+        .toEqual({ start: 1.14, end: 4.2, unit: '', wrapper: 'scaleY' })
     })
   })
 

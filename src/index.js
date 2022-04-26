@@ -58,7 +58,7 @@ export const spring = (startStyles, endStyles, options = {}) => {
   const parsed = parseStyles(startStyles, endStyles)
 
   // build keyframe styles based on parsed properties
-  parsed.forEach(({ prop, unit, start, end, rgb, fixed }) => {
+  parsed.forEach(({ prop, unit, start, end, rgb, fixed, wrapper }) => {
     // if start and end values differ, interpolate between them
     if (!isNil(start) && !isNil(end)) {
       interpolate(start, end).forEach((interpolated, i) => {
@@ -66,6 +66,7 @@ export const spring = (startStyles, endStyles, options = {}) => {
         let value = Number(interpolated.toFixed(unit === 'px' ? 0 : precision))
         // add unit when applicable
         value = value === 0 || !unit ? value : `${value}${unit}`
+        value = wrapper ? `${wrapper}(${value})` : value
         result[i] = addValueToProperty(result[i], prop, value)
       })
     // if hex representations of rgb colors are found

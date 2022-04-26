@@ -437,102 +437,130 @@ Object {
   "0%": Object {
     "border": "1px solid #f00",
     "margin-right": "1.52em",
+    "transform": "translateX(1px) translateY(1px) scaleX(1.01) scaleY(1.01)",
   },
   "1%": Object {
     "border": "1px solid #f00",
     "margin-right": "4.34em",
+    "transform": "translateX(3px) translateY(3px) scaleX(1.03) scaleY(1.03)",
   },
   "10%": Object {
     "border": "5px solid #f00",
     "margin-right": "57.97em",
+    "transform": "translateX(46px) translateY(46px) scaleX(1.46) scaleY(1.46)",
   },
   "100%": Object {
     "border": "10px solid #f00",
     "margin-right": "127.01em",
+    "transform": "translateX(100px) translateY(100px) scaleX(2) scaleY(2)",
   },
   "11%": Object {
     "border": "6px solid #f00",
     "margin-right": "64.64em",
+    "transform": "translateX(51px) translateY(51px) scaleX(1.51) scaleY(1.51)",
   },
   "12%": Object {
     "margin-right": "71.12em",
+    "transform": "translateX(56px) translateY(56px) scaleX(1.56) scaleY(1.56)",
   },
   "13%": Object {
     "border": "6px solid #f00",
     "margin-right": "77.37em",
+    "transform": "translateX(61px) translateY(61px) scaleX(1.61) scaleY(1.61)",
   },
   "14%": Object {
     "border": "7px solid #f00",
     "margin-right": "83.33em",
+    "transform": "translateX(66px) translateY(66px) scaleX(1.66) scaleY(1.66)",
   },
   "15%": Object {
     "border": "7px solid #f00",
     "margin-right": "88.99em",
+    "transform": "translateX(70px) translateY(70px) scaleX(1.7) scaleY(1.7)",
   },
   "16%": Object {
     "border": "8px solid #f00",
     "margin-right": "94.31em",
+    "transform": "translateX(74px) translateY(74px) scaleX(1.74) scaleY(1.74)",
   },
   "17%": Object {
     "margin-right": "99.28em",
+    "transform": "translateX(78px) translateY(78px) scaleX(1.78) scaleY(1.78)",
   },
   "18%": Object {
     "border": "8px solid #f00",
     "margin-right": "103.88em",
+    "transform": "translateX(82px) translateY(82px) scaleX(1.82) scaleY(1.82)",
   },
   "19%": Object {
     "border": "9px solid #f00",
     "margin-right": "108.12em",
+    "transform": "translateX(85px) translateY(85px) scaleX(1.85) scaleY(1.85)",
   },
   "2%": Object {
     "border": "2px solid #f00",
     "margin-right": "8.23em",
+    "transform": "translateX(6px) translateY(6px) scaleX(1.06) scaleY(1.06)",
   },
   "20%": Object {
     "margin-right": "111.99em",
+    "transform": "translateX(88px) translateY(88px) scaleX(1.88) scaleY(1.88)",
   },
   "21%": Object {
     "margin-right": "115.5em",
+    "transform": "translateX(91px) translateY(91px) scaleX(1.91) scaleY(1.91)",
   },
   "22%": Object {
     "border": "9px solid #f00",
     "margin-right": "118.65em",
+    "transform": "translateX(93px) translateY(93px) scaleX(1.93) scaleY(1.93)",
   },
   "23%": Object {
     "border": "10px solid #f00",
     "margin-right": "121.47em",
+    "transform": "translateX(96px) translateY(96px) scaleX(1.96) scaleY(1.96)",
   },
   "24%": Object {
     "margin-right": "123.96em",
+    "transform": "translateX(98px) translateY(98px) scaleX(1.98) scaleY(1.98)",
   },
   "25%": Object {
     "margin-right": "126.13em",
+    "transform": "translateX(99px) translateY(99px) scaleX(1.99) scaleY(1.99)",
   },
   "26%": Object {
     "margin-right": "128.01em",
+    "transform": "translateX(101px) translateY(101px) scaleX(2.01) scaleY(2.01)",
   },
   "27%": Object {
     "margin-right": "129.62em",
+    "transform": "translateX(102px) translateY(102px) scaleX(2.02) scaleY(2.02)",
   },
   "28%": Object {
     "margin-right": "130.97em",
+    "transform": "translateX(103px) translateY(103px) scaleX(2.03) scaleY(2.03)",
   },
   "29%": Object {
     "margin-right": "132.08em",
+    "transform": "translateX(104px) translateY(104px) scaleX(2.04) scaleY(2.04)",
   },
   "3%": Object {
     "margin-right": "13.01em",
+    "transform": "translateX(10px) translateY(10px) scaleX(1.1) scaleY(1.1)",
   },
   "30%": Object {
     "margin-right": "132.97em",
+    "transform": "translateX(105px) translateY(105px) scaleX(2.05) scaleY(2.05)",
   },
   "31%": Object {
     "border": "10px solid #f00",
     "margin-right": "133.67em",
+    "transform": "translateX(105px) translateY(105px) scaleX(2.05) scaleY(2.05)",
   },
   "32%": Object {
     "border": "11px solid #f00",
     "margin-right": "134.19em",
+    "transform": "translateX(106px) translateY(106px) scaleX(2.06) scaleY(2.06)",
   },
   "33%": Object {
     "margin-right": "134.56em",
@@ -559,44 +587,54 @@ Object {
   "4%": Object {
     "border": "2px solid #f00",
     "margin-right": "18.48em",
+    "transform": "translateX(15px) translateY(15px) scaleX(1.15) scaleY(1.15)",
   },
   "40%": Object {
     "border": "10px solid #f00",
     "margin-right": "134.02em",
+    "transform": "translateX(106px) translateY(106px) scaleX(2.06) scaleY(2.06)",
   },
   "41%": Object {
     "margin-right": "133.68em",
+    "transform": "translateX(105px) translateY(105px) scaleX(2.05) scaleY(2.05)",
   },
   "42%": Object {
     "margin-right": "133.31em",
   },
   "43%": Object {
     "margin-right": "132.91em",
+    "transform": "translateX(105px) translateY(105px) scaleX(2.05) scaleY(2.05)",
   },
   "44%": Object {
     "margin-right": "132.49em",
+    "transform": "translateX(104px) translateY(104px) scaleX(2.04) scaleY(2.04)",
   },
   "45%": Object {
     "margin-right": "132.07em",
   },
   "46%": Object {
     "margin-right": "131.65em",
+    "transform": "translateX(104px) translateY(104px) scaleX(2.04) scaleY(2.04)",
   },
   "47%": Object {
     "margin-right": "131.23em",
+    "transform": "translateX(103px) translateY(103px) scaleX(2.03) scaleY(2.03)",
   },
   "48%": Object {
     "margin-right": "130.82em",
   },
   "49%": Object {
     "margin-right": "130.42em",
+    "transform": "translateX(103px) translateY(103px) scaleX(2.03) scaleY(2.03)",
   },
   "5%": Object {
     "border": "3px solid #f00",
     "margin-right": "24.49em",
+    "transform": "translateX(19px) translateY(19px) scaleX(1.19) scaleY(1.19)",
   },
   "50%": Object {
     "margin-right": "130.03em",
+    "transform": "translateX(102px) translateY(102px) scaleX(2.02) scaleY(2.02)",
   },
   "51%": Object {
     "margin-right": "129.66em",
@@ -606,9 +644,11 @@ Object {
   },
   "53%": Object {
     "margin-right": "128.99em",
+    "transform": "translateX(102px) translateY(102px) scaleX(2.02) scaleY(2.02)",
   },
   "54%": Object {
     "margin-right": "128.68em",
+    "transform": "translateX(101px) translateY(101px) scaleX(2.01) scaleY(2.01)",
   },
   "55%": Object {
     "margin-right": "128.4em",
@@ -621,13 +661,16 @@ Object {
   },
   "58%": Object {
     "margin-right": "127.69em",
+    "transform": "translateX(101px) translateY(101px) scaleX(2.01) scaleY(2.01)",
   },
   "59%": Object {
     "margin-right": "127.5em",
+    "transform": "translateX(100px) translateY(100px) scaleX(2) scaleY(2)",
   },
   "6%": Object {
     "border": "3px solid #f00",
     "margin-right": "30.89em",
+    "transform": "translateX(24px) translateY(24px) scaleX(1.24) scaleY(1.24)",
   },
   "60%": Object {
     "margin-right": "127.32em",
@@ -662,6 +705,7 @@ Object {
   "7%": Object {
     "border": "4px solid #f00",
     "margin-right": "37.55em",
+    "transform": "translateX(30px) translateY(30px) scaleX(1.3) scaleY(1.3)",
   },
   "70%": Object {
     "margin-right": "126.53em",
@@ -696,6 +740,7 @@ Object {
   "8%": Object {
     "border": "4px solid #f00",
     "margin-right": "44.34em",
+    "transform": "translateX(35px) translateY(35px) scaleX(1.35) scaleY(1.35)",
   },
   "80%": Object {
     "margin-right": "126.64em",
@@ -730,6 +775,7 @@ Object {
   "9%": Object {
     "border": "5px solid #f00",
     "margin-right": "51.18em",
+    "transform": "translateX(40px) translateY(40px) scaleX(1.4) scaleY(1.4)",
   },
   "90%": Object {
     "margin-right": "126.88em",

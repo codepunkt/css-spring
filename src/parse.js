@@ -21,6 +21,7 @@ const spaceCombinedProps = [
   'margin',
   'outline',
   'padding',
+  'transform',
 ]
 
 // splits a css property value into multiple values
@@ -46,11 +47,13 @@ export const combine = (key, value) => {
 // zero or more digits followed by a dot followed by one or more digits.
 // assuming the unit can be any sequence of lowercase letters (including none)
 //
-// returns an object with `unit` and `value` properties.
+// returns an object with `unit`, `value`, and `wrapper` properties.
+// `wrapper` is a string if the value is parenthesized,
+// ie `translate(30px)` would make `wrapper === 'translate'`.
 export const parseNumber = (number) => {
-  const regex = /^([+-]?(?:\d+|\d*\.\d+))([a-z]*|%)$/
-  const [ , value, unit ] = `${number}`.match(regex) || []
-  return value ? { unit, value: Number(value) } : undefined
+  const regex = /^(?:([a-zA-Z]+)\()?([+-]?(?:\d+|\d*\.\d+))([a-z]*|%)\)?$/
+  const [, wrapper, value, unit] = `${number}`.match(regex) || []
+  return value ? { unit, value: Number(value), wrapper } : undefined
 }
 
 // check if a string is a hex color. returns an array of three integers
@@ -88,6 +91,8 @@ export const parseValues = (startValue, endValue) => {
         unit: startUnit || endUnit,
         start: numericStart.value,
         end: numericEnd.value,
+        // for parenthesized values, like 'translate(30px)'
+        wrapper: numericStart.wrapper,
       }
     }
   }
